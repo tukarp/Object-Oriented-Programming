@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymlead.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/add_person}" th:object="${newPerson}" method="post">
+
+    <p>imię <input type ="text" th:field="*{firstName}"></p>
+    <p>nazwisko <input type ="text" th:field="*{lastName}"></p>
+    <p><input type ="submit"></p>
+</form>
+
+<th:block th:each="item : ${people}">
+    <p th:text="${item.toString}"></p>
+</th:block>
+</body>
+
+</html>
