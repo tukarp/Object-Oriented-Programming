@@ -12,7 +12,7 @@
 - [Lab 8 - Powtórzenie 1](#lab-8---powtórzenie-1)
 - [Lab 9 - Testy](#lab-9---testy)
 - [Lab 10 - Aplikacje sieciowe](#lab-10---aplikacje-sieciowe)
-- [Lab 11 - Graficzny interfejs użytkownika](#lab-11---graficzny-interfejs-uytkownika)
+- [Lab 11 - Graficzny interfejs użytkownika](#lab-11---graficzny-interfejs-użytkownika)
 - [Lab 12 - Gra](#lab-12---gra)
 - [Lab 13 - Bazy danych](#lab-13---bazy-danych)
 - [Lab 14 - Powtórzenie 2](#lab-14---powtórzenie-2)
