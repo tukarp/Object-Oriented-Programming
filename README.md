@@ -2,10 +2,29 @@
 
 ## Spis Treści
 
+### Treści zadań
+
 - [Lab 1 - Klasa i obiekt](#lab-1---klasa-i-obiekt)
 - [Lab 2 - paradygmaty programowania obiektowego](#lab-2---paradygmaty-programowania-obiektowego)
 - [Lab 3 - Wzorce projektowe](#lab-3---wzorce-projektowe)
 - [Lab 4 - Pliki, napisy, serializacja](#lab-4---pliki-napisy-serializacja)
+- [Lab 5 - Wyjątki](#lab-5---wyjątki)
+- [Lab 6 - Strumienie](#lab-6---strumienie)
+- [Lab 7 - Programowanie generyczne](#lab-7---programowanie-generyczne)
+- [Lab 8 - Powtórzenie 1](#lab-8---powtórzenie-1)
+- [Lab 9 - Testy](#lab-9---testy)
+- [Lab 10 - Aplikacje sieciowe](#lab-10---aplikacje-sieciowe)
+- [Lab 11 - Graficzny interfejs użytkownika](#lab-11---graficzny-interfejs-użytkownika)
+- [Lab 12 - Gra](#lab-12---gra)
+- [Lab 13 - Bazy danych](#lab-13---bazy-danych)
+- [Lab 14 - Powtórzenie 2](#lab-14---powtórzenie-2)
+
+### Rozwiązania
+
+- [Lab 1 - Klasa i obiekt](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Lab%201)
+- [Lab 2 - paradygmaty programowania obiektowego](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Lab%202)
+- [Lab 3 - Wzorce projektowe](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Lab%203)
+- [Lab 4 - Pliki, napisy, serializacja](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Lab%204)
 - [Lab 5 - Wyjątki](#lab-5---wyjątki)
 - [Lab 6 - Strumienie](#lab-6---strumienie)
 - [Lab 7 - Programowanie generyczne](#lab-7---programowanie-generyczne)
