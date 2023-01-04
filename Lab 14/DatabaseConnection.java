@@ -28,5 +28,4 @@ public class DatabaseConnection {
             throwables.printStackTrace();
         }
     }
-
 }
