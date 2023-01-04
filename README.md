@@ -4,7 +4,7 @@
 
 - [Lab 1 - Klasa i obiekt](#lab-1---klasa-i-obiekt)
 - [Lab 2 - paradygmaty programowania obiektowego](#lab-2---paradygmaty-programowania-obiektowego)
-- [Lab 3 - Lab 3 - Wzorce projektowe](#lab-3---wzorce-projektowe)
+- [Lab 3 - Wzorce projektowe](#lab-3---wzorce-projektowe)
 - [Lab 4 - Pliki, napisy, serializacja](#lab-4---pliki-napisy-serializacja)
 - [Lab 5 - Wyjątki](#lab-5---wyjątki)
 - [Lab 6 - Strumienie](#lab-6---strumienie)
