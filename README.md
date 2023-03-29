@@ -1,4 +1,4 @@
-# Object Oriented Programming
+# Programowanie Obiektowe
 
 ## Spis Treści
 
