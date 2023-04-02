@@ -19,7 +19,7 @@
 - [Lab 13 - Bazy danych](#lab-13---bazy-danych)
 - [Lab 14 - Powtórzenie 2](#lab-14---powtórzenie-2)
 
-## Lab 1 - Klasa i obiekt
+## Laboratorium 1 - Klasa i obiekt
 
 ### Zadanie 1
 
@@ -41,7 +41,7 @@ Zdefiniuj klasę Polygon posiadającą prywatną tablicę punktów. Konstruktor 
 
 ### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Laboratoria/Lab%2001)
 
-## Lab 2 - Paradygmaty programowania obiektowego
+## Laboratorium 2 - Paradygmaty programowania obiektowego
 
 ### Zadanie 1
 
@@ -71,7 +71,7 @@ Zmodyfikuj klasę SvgScene, aby posiadała tablicę obiektów klasy Shape i korz
 
 ### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Laboratoria/Lab%2002)
 
-## Lab 3 - Wzorce projektowe
+## Laboratorium 3 - Wzorce projektowe
 
 ### Zadanie 1
 
@@ -161,7 +161,7 @@ W metodzie toSvg klasy zewnętrznej wykorzystaj sformatowany napis:
 
 ### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Laboratoria/Lab%2003)
 
-## Lab 4 - Pliki, napisy, serializacja
+## Laboratorium 4 - Pliki, napisy, serializacja
 
 ### Zadanie 1
 
@@ -207,7 +207,7 @@ Zdefiniuj klasę User, dziedziczącą po Person, z polami login i password. Napi
 
 ### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Laboratoria/Lab%2004)
 
-## Lab 5 - Wyjątki
+## Laboratorium 5 - Wyjątki
 
 ### Zadanie 1
 
@@ -258,7 +258,7 @@ Zdefiniuj wyjątki ParentNotReferencingChildException oraz ChildNotReferencingPa
 
 ### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Laboratoria/Lab%2005)
 
-## Lab 6 - Strumienie
+## Laboratorium 6 - Strumienie
 
 ### Zadanie 1
 
@@ -303,7 +303,7 @@ Jeżeli opcje filter i color zostaną użyte jednocześnie, podciąg z filtra po
 
 ### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Laboratoria/Lab%2006)
 
-## Lab 7 - Programowanie generyczne
+## Laboratorium 7 - Programowanie generyczne
 
 ### Zadania 1
 
@@ -349,7 +349,7 @@ Napisz komparator, który porówna dwie kolekcje pod względem liczby ich elemen
 
 ### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Laboratoria/Lab%2007)
 
-## Lab 8 - Powtórzenie 1
+## Laboratorium 8 - Powtórzenie 1
 
 ### Zadanie 1
 
@@ -381,7 +381,7 @@ Klasa ICDCodeTabularOptimizedForMemory nie powinna przetrzymywać danych w pami�
 
 ### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Laboratoria/Lab%2008)
 
-## Lab 9 - Testy
+## Laboratorium 9 - Testy
 
 ### Zadanie 1a
 
@@ -439,7 +439,7 @@ Napisz fabrykę dynamicznych testów, które przetestują poprawność działani
 
 ### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Laboratoria/Lab%2009)
 
-## Lab 10 - Aplikacje sieciowe
+## Laboratorium 10 - Aplikacje sieciowe
 
 ### Zadanie 1
 
@@ -471,7 +471,7 @@ Jeżeli użytkownik napisze w czacie “/file recipient path", gdzie recipient j
 
 ### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Laboratoria/Lab%2010)
 
-## Lab 11 - Graficzny interfejs użytkownika
+## Laboratorium 11 - Graficzny interfejs użytkownika
 
 ### Zadanie 1
 
@@ -506,7 +506,7 @@ Do głównego okna dodaj obiekt klasy ProgressBar. Zaprogramuj przycisk wysyłan
 
 ### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Laboratoria/Lab%2011)
 
-## Lab 12 - Gra
+## Laboratorium 12 - Gra
 
 ### Zadanie 1
 
@@ -568,7 +568,7 @@ W klasie Ball napisz metodę bounceFromPaddle, która przyjmie zmiennoprzecinkow
 
 ### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Laboratoria/Lab%2012)
 
-## Lab 13 - Bazy danych
+## Laboratorium 13 - Bazy danych
 
 Utwórz bazę SQLite składającą się z pojedynczej tabeli:
 
@@ -619,7 +619,7 @@ Do strony dodaj formularz składający się z dwóch pól: imię i nazwisko oraz
 
 ### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Laboratoria/Lab%2013)
 
-## Lab 14 - Powtórzenie 2
+## Laboratorium 14 - Powtórzenie 2
 
 ### Zadanie 1
 
