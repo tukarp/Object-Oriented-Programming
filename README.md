@@ -39,7 +39,7 @@ Napisz funkcję (metodę klasy głównej), która przyjmie: obiekt l klasy Line 
 
 Zdefiniuj klasę Polygon posiadającą prywatną tablicę punktów. Konstruktor tej klasy powinien przyjmować liczbę wierzchołków. Napisz dwa mutatory wierzchołków: (1) przyjmujący indeks w tablicy i punkt, który ma zostać zastąpiony oraz (2) tablicę punktów. Napisz publiczną metodę toSvg() działającą analogicznie jak w poprzednim zadaniu.
 
-### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main//Laboratoria/Lab-01)
+### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Laboratoria/Lab%2001)
 
 ## Lab 2 - Paradygmaty programowania obiektowego
 
@@ -69,7 +69,7 @@ Napisz klasę Ellipse dziedziczącą po Shape, posiadającą prywatne pola: śro
 
 Zmodyfikuj klasę SvgScene, aby posiadała tablicę obiektów klasy Shape i korzystając z polimorfizmu zapisz w niej obiekty typu Polygon i Ellipse.
 
-### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Lab%202)
+### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Laboratoria/Lab%2002)
 
 ## Lab 3 - Wzorce projektowe
 
@@ -127,15 +127,19 @@ Dodaj do klasy SvgScene tablicę String defs[] oraz metodę dodającą elementy 
 
 Zdefiniuj klasę DropShadowDecorator dziedziczącą po ShapeDecorator. Jej zadaniem jest udekorowanie obiektu Shape rzucanym cieniem. Jest to realizowane przez umieszczenie w tagu <defs> sformatowanego kodu:
 
+```
 \t<filter id=\"f%d\" x=\"-100%%\" y=\"-100%%\" width=\"300%%\" height=\"300%%\">\n" +
 "\t\t<feOffset result=\"offOut\" in=\"SourceAlpha\" dx=\"5\" dy=\"5\" />\n" +
 "\t\t<feGaussianBlur result=\"blurOut\" in=\"offOut\" stdDeviation=\"5\" />\n" +
 "\t\t<feBlend in=\"SourceGraphic\" in2=\"blurOut\" mode=\"normal\" />\n" +
 "\t</filter>", index
+```
 
 oraz w metodzie toSvg:
 
+```
 "filter=\"url(#f%d)\" ", index
+```
 
 gdzie w obu przypadkach index jest liczbą całkowitą, unikalną dla tego filtra. Unikalność indeksu zagwarantuj przy użyciu prywatnego, statycznego pola klasy.
 
@@ -155,7 +159,7 @@ Wewnątrz klasy zdefiniuj klasę Builder. W klasie Builder stwórz metodę, któ
 W metodzie toSvg klasy zewnętrznej wykorzystaj sformatowany napis:
 "fill=\"url(#g%d)\" ", index
 
-### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Lab%203)
+### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Laboratoria/Lab%2003)
 
 ## Lab 4 - Pliki, napisy, serializacja
 
@@ -201,7 +205,7 @@ Zdefiniuj klasę User, dziedziczącą po Person, z polami login i password. Napi
 - toEncryptedFile - przyjmującą tablicę obiektów User i ścieżkę do pliku. Metoda powinna umieścić w pliku dane z tablicy w postaci binarnej, ale zaszyfrowane dowolną metodą, w których kluczem będzie "password",
 - fromEncryptedFile - przyjmującą ścieżkę do pliku binarnego, zwracającą tablicę obiektów User. Metoda powinna odczytać plik stworzony przez metodę toEncryptedFile.
 
-### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Lab%204)
+### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Laboratoria/Lab%2004)
 
 ## Lab 5 - Wyjątki
 
@@ -252,7 +256,7 @@ Rozważ sytuacje, w których:
 
 Zdefiniuj wyjątki ParentNotReferencingChildException oraz ChildNotReferencingParentException rzucane przez metodę DirectoryPersonPersistenceManager::load. Wyjątki te powinny dziedziczyć po klasie ParentChildInconsistencyException, której wyjątek należy przechwycić.
 
-### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Lab%205)
+### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Laboratoria/Lab%2005)
 
 ## Lab 6 - Strumienie
 
@@ -297,7 +301,7 @@ Zmodyfikuj wywołanie funkcjonalności "ls" tak, aby można było go wywołać z
 
 Jeżeli opcje filter i color zostaną użyte jednocześnie, podciąg z filtra powinien być w nazwach plików i katalogów wyróżniony kolorem czerwonym.
 
-### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Lab%206)
+### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Laboratoria/Lab%2006)
 
 ## Lab 7 - Programowanie generyczne
 
@@ -343,7 +347,7 @@ Korzystając z niego napisz metodę statyczną, która dla listy oraz granic zak
 
 Napisz komparator, który porówna dwie kolekcje pod względem liczby ich elementów. Następnie zmodyfikuj go tak, aby przyjmował wyłącznie kolekcje liczb i porównywał je pod względem ich sumy.
 
-### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Lab%207)
+### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Laboratoria/Lab%2007)
 
 ## Lab 8 - Powtórzenie 1
 
@@ -375,7 +379,7 @@ Klasa ICDCodeTabularOptimizedForTime powinna jednorazowo załadować wszystkie k
 
 Klasa ICDCodeTabularOptimizedForMemory nie powinna przetrzymywać danych w pamięci operacyjnej, ale za każdym wywołaniem metody getDescription powinna otwierać plik i wyszukiwać w nim opisu.
 
-### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Lab%208)
+### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Laboratoria/Lab%2008)
 
 ## Lab 9 - Testy
 
@@ -433,7 +437,7 @@ W celu przetestowania metody Product::getProduct załóżmy, że metoda Product:
 
 Napisz fabrykę dynamicznych testów, które przetestują poprawność działania metody Product::getProduct dla wszystkich wygenerowanych plików.
 
-### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Lab%209)
+### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Laboratoria/Lab%2009)
 
 ## Lab 10 - Aplikacje sieciowe
 
@@ -465,7 +469,7 @@ Jeżeli użytkownik napisze w czacie “/w recipient message”, gdzie recipient
 
 Jeżeli użytkownik napisze w czacie “/file recipient path", gdzie recipient jest loginem odbiorcy, a path ścieżką do pliku, należy przesłać ten plik odbiorcy. Podczas przesyłania należy prezentować aktualny, procentowy, postęp kopiowania. Jeżeli odbiorca nie jest zalogowany, należy wyświetlić nadawcy stosowną informację.
 
-### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Lab%2010)
+### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Laboratoria/Lab%2010)
 
 ## Lab 11 - Graficzny interfejs użytkownika
 
@@ -500,7 +504,7 @@ Obsłuż wyświetlanie listy użytkowników. Podczas logowania klient powinien p
 
 Do głównego okna dodaj obiekt klasy ProgressBar. Zaprogramuj przycisk wysyłania pliku, jak aby otwierał dialog wyboru plików. Zaprogramuj przesyłanie pliku aktywnemu użytkownikowi z listy. Postęp przesyłania należy wyświetlić w kliencie otrzymującym plik.
 
-### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Lab%2011)
+### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Laboratoria/Lab%2011)
 
 ## Lab 12 - Gra
 
@@ -562,7 +566,7 @@ W klasie Brick zdefiniuj publiczny typ wyliczeniowy CrushType {NoCrush, Horizont
 
 W klasie Ball napisz metodę bounceFromPaddle, która przyjmie zmiennoprzecinkowy parametr. Parametr ten powinien być proporcjonalny do odległości pozycji uderzenia piłki od środka platformy i powinien posłużyć do obliczenia zmodyfikowanego wektora ruchu tak, aby uderzenie bliżej końców powodowało ruch pod większym kątem.
 
-### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Lab%2012)
+### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Laboratoria/Lab%2012)
 
 ## Lab 13 - Bazy danych
 
@@ -613,7 +617,7 @@ Do utworzonego projektu dodaj klasy DatabaseConnection i Person. Zmodyfikuj stro
 
 Do strony dodaj formularz składający się z dwóch pól: imię i nazwisko oraz przycisku. Po naciśnięciu przycisku dane z formularza należy dodać jako kolejny wiersz do tabeli w bazie i wyświetlić na stronie.
 
-### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Lab%2013)
+### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Laboratoria/Lab%2013)
 
 ## Lab 14 - Powtórzenie 2
 
@@ -648,4 +652,4 @@ radius INTEGER NOT NULL
 Niech serwer, w momencie wystartowania łączy się z tą bazą. Wewnątrz serwera zdefiniuj metodę saveDot(), przyjmującą obiekt Dot, która zapisuje jego zawartość w bazie.
 Napisz metodę getSavedDots(), która zwraca wszystkie zapisane koła w postaci listy Dot. Niech metoda broadcast() zapisuje koło do bazy. Chwilę po dołączeniu nowego klienta, należy mu przesłać wszystkie wygenerowane okręgi. Utwórz pomocniczą, niestatyczną metodę klasy Dot, generującą wiadomość na postawie parametrów koła zawartych w obiekcie.
 
-### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Lab%2014)
+### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Laboratoria/Lab%2014)
