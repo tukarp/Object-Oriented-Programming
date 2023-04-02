@@ -2,7 +2,7 @@
 
 ## Spis Treści
 
-### Treści zadań
+### Laboratoria
 
 - [Lab 1 - Klasa i obiekt](#lab-1---klasa-i-obiekt)
 - [Lab 2 - paradygmaty programowania obiektowego](#lab-2---paradygmaty-programowania-obiektowego)
@@ -18,23 +18,6 @@
 - [Lab 12 - Gra](#lab-12---gra)
 - [Lab 13 - Bazy danych](#lab-13---bazy-danych)
 - [Lab 14 - Powtórzenie 2](#lab-14---powtórzenie-2)
-
-### Rozwiązania
-
-- [Lab 1 - Klasa i obiekt](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Lab%201)
-- [Lab 2 - paradygmaty programowania obiektowego](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Lab%202)
-- [Lab 3 - Wzorce projektowe](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Lab%203)
-- [Lab 4 - Pliki, napisy, serializacja](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Lab%204)
-- [Lab 5 - Wyjątki](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Lab%205)
-- [Lab 6 - Strumienie](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Lab%206)
-- [Lab 7 - Programowanie generyczne](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Lab%207)
-- [Lab 8 - Powtórzenie 1](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Lab%208)
-- [Lab 9 - Testy](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Lab%209)
-- [Lab 10 - Aplikacje sieciowe](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Lab%2010)
-- [Lab 11 - Graficzny interfejs użytkownika](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Lab%2011)
-- [Lab 12 - Gra](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Lab%2012)
-- [Lab 13 - Bazy danych](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Lab%2013)
-- [Lab 14 - Powtórzenie 2](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Lab%2014)
 
 ## Lab 1 - Klasa i obiekt
 
@@ -56,7 +39,7 @@ Napisz funkcję (metodę klasy głównej), która przyjmie: obiekt l klasy Line 
 
 Zdefiniuj klasę Polygon posiadającą prywatną tablicę punktów. Konstruktor tej klasy powinien przyjmować liczbę wierzchołków. Napisz dwa mutatory wierzchołków: (1) przyjmujący indeks w tablicy i punkt, który ma zostać zastąpiony oraz (2) tablicę punktów. Napisz publiczną metodę toSvg() działającą analogicznie jak w poprzednim zadaniu.
 
-### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main/Lab%201)
+### [Rozwiązanie](https://github.com/tukarp/Object-Oriented-Programming/tree/main//Laboratoria/Lab-01)
 
 ## Lab 2 - Paradygmaty programowania obiektowego
 
