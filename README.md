@@ -19,6 +19,40 @@
 - [Lab 13 - Bazy danych](#laboratorium-13---bazy-danych)
 - [Lab 14 - Powtórzenie 2](#laboratorium-14---powtórzenie-2)
 
+# Notatki
+
+## Teoria
+
+### Klasy
+
+- ```public``` (publiczne) - mogą ich bez ograniczeń używać obiekty wszystkich klas,
+- ```protected``` (chronione) - mogą ich bez ograniczeń używać obiekty tej samej klasy lub jej podklas,
+- ```private``` (prywatne) - mogą ich używać jedynie obiekty tej samej klasy.
+
+## Java
+
+### Słowa kluczowe
+
+```abstract``` &nbsp; ```continue```	```for```	```new```	```switch```
+
+```assert``` ```default```	```if```	```package```	```synchronized```
+
+```boolean```	```do```	```goto```	```private```	```this```
+
+```break```	```double```	```implements```	```protected```	```throw```
+
+```byte```	```else```	```import```	```public```	```throws```
+
+```case```	```enum```	```instanceof```	```return```	```transient```
+
+```catch```	```extends```	```int```	```short```	```try```
+
+```char```	```final```	```interface```	```static```	```void```
+
+```class```	```finally```	```long```	```strictfp```	```volatile```
+
+```const```	```float```	```native```	```super```	```while```
+
 ## Laboratorium 1 - Klasa i obiekt
 
 ### Zadanie 1
