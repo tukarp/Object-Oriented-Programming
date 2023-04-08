@@ -33,7 +33,7 @@
 
 ### Słowa kluczowe
 
-```abstract``` &nbsp; ```continue```	```for```	```new```	```switch```
+```abstract```  ```continue```	```for```	```new```	```switch```
 
 ```assert``` ```default```	```if```	```package```	```synchronized```
 
@@ -52,6 +52,42 @@
 ```class```	```finally```	```long```	```strictfp```	```volatile```
 
 ```const```	```float```	```native```	```super```	```while```
+
+### Operatory
+
+```=``` ```>```	```<```	```!```	```~```	```?``` ```:```
+
+```==```    ```<=```	```>=```	```!=```	```&&```	```||```	```++```	```--```
+
+```+```	```-```	```*```	```/```	```&```	```|```	```^```	```%```	```<<```	```>>```	```>>>```
+
+```+=```	```-=```	```*=```	```/=```	```&=```	```|=```	```^=```	```%=```	```<<=```	```>>=```	```>>>=```
+
+### Typy
+
+Typy dzielą się na dwie kategorie:
+- ```pierwotne```
+    - ```boolean``` - typ logiczny,
+    - ```byte```, ```short```, ```int```, ```long```, ```char``` - typy całkowitoliczbowe,
+    - ```float```, ```double``` - typy zmiennopozycyjne.
+- ```referencyjne```
+    - ```class``` - typy klas,
+    - ```interface``` - typy interfejsów,
+    - ```array``` - typy tablic.
+
+### Zmienne
+
+Rodzaje zmiennych:
+- ```zmienne```
+    - ```klasowe```,
+    - ```egzemplarzowe```,
+    - ```lokalne```,
+- ```elementy```
+     - ```tablicy(anonimowe)```,
+- ```parametry```
+    - ```metod```,
+    - ```konstruktorów```,
+    - ```obsługi wyjątków```.
 
 ## Laboratorium 1 - Klasa i obiekt
 
