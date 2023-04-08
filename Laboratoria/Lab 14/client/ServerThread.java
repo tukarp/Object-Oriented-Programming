@@ -1,7 +1,6 @@
 package com.example.circleapp.client;
 
 import com.example.circleapp.Dot;
-
 import java.io.*;
 import java.net.Socket;
 import java.util.function.Consumer;
