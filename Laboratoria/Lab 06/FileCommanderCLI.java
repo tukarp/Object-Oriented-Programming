@@ -1,14 +1,9 @@
 package com.company;
 
 import java.io.*;
-import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import java.util.Optional;
 import java.util.function.Function;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipOutputStream;
 
 public class FileCommanderCLI {
     private BufferedReader reader;
@@ -36,7 +31,7 @@ public class FileCommanderCLI {
     }
 
     public void runCommand(String command)throws IOException{
-        String commandArr[]=command.split(" ");
+        String[] commandArr =command.split(" ");
 
         switch (commandArr[0]) {
             case "pwd" -> writer.write(fileCommander.pwd() + "\n");
@@ -53,10 +48,10 @@ public class FileCommanderCLI {
                 .filter(entry -> entry.startsWith(filterPrefix))
                 .findFirst();
 
-        String substring = filterParameter.isPresent() ? filterParameter.get().substring(filterPrefix.length()) : null;
+        String substring = filterParameter.map(s -> s.substring(filterPrefix.length())).orElse(null);
 
         Function<String, String> dirFormatFunction;
-        if(Arrays.stream(parameters).anyMatch(entry -> entry.equals("--color"))) {
+        if(Arrays.asList(parameters).contains("--color")) {
             dirFormatFunction = FileCommander::formatDirColor;
         } else {
             dirFormatFunction = FileCommander::formatDirBraces;
