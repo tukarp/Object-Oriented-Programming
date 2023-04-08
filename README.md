@@ -4,20 +4,20 @@
 
 ### Laboratoria
 
-- [Lab 1 - Klasa i obiekt](#lab-1---klasa-i-obiekt)
-- [Lab 2 - paradygmaty programowania obiektowego](#lab-2---paradygmaty-programowania-obiektowego)
-- [Lab 3 - Wzorce projektowe](#lab-3---wzorce-projektowe)
-- [Lab 4 - Pliki, napisy, serializacja](#lab-4---pliki-napisy-serializacja)
-- [Lab 5 - Wyjątki](#lab-5---wyjątki)
-- [Lab 6 - Strumienie](#lab-6---strumienie)
-- [Lab 7 - Programowanie generyczne](#lab-7---programowanie-generyczne)
-- [Lab 8 - Powtórzenie 1](#lab-8---powtórzenie-1)
-- [Lab 9 - Testy](#lab-9---testy)
-- [Lab 10 - Aplikacje sieciowe](#lab-10---aplikacje-sieciowe)
-- [Lab 11 - Graficzny interfejs użytkownika](#lab-11---graficzny-interfejs-użytkownika)
-- [Lab 12 - Gra](#lab-12---gra)
-- [Lab 13 - Bazy danych](#lab-13---bazy-danych)
-- [Lab 14 - Powtórzenie 2](#lab-14---powtórzenie-2)
+- [Lab 1 - Klasa i obiekt](#laboratorium-1---klasa-i-obiekt)
+- [Lab 2 - paradygmaty programowania obiektowego](#laboratorium-2---paradygmaty-programowania-obiektowego)
+- [Lab 3 - Wzorce projektowe](#laboratorium-3---wzorce-projektowe)
+- [Lab 4 - Pliki, napisy, serializacja](#laboratorium-4---pliki-napisy-serializacja)
+- [Lab 5 - Wyjątki](#laboratorium-5---wyjątki)
+- [Lab 6 - Strumienie](#laboratorium-6---strumienie)
+- [Lab 7 - Programowanie generyczne](#laboratorium-7---programowanie-generyczne)
+- [Lab 8 - Powtórzenie 1](#laboratorium-8---powtórzenie-1)
+- [Lab 9 - Testy](#laboratorium-9---testy)
+- [Lab 10 - Aplikacje sieciowe](#laboratorium-10---aplikacje-sieciowe)
+- [Lab 11 - Graficzny interfejs użytkownika](#laboratorium-11---graficzny-interfejs-użytkownika)
+- [Lab 12 - Gra](#laboratorium-12---gra)
+- [Lab 13 - Bazy danych](#laboratorium-13---bazy-danych)
+- [Lab 14 - Powtórzenie 2](#laboratorium-14---powtórzenie-2)
 
 ## Laboratorium 1 - Klasa i obiekt
 
