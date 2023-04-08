@@ -7,7 +7,7 @@ public class Main {
         Line perp2[] = Line.perpendicular(line, line.getP1());
 
         System.out.println(line.toSvg());
-        for(int i  =0; i < perp2.length; i++)
+        for(int i=0;i<perp2.length;i++)
             System.out.println(perp2[i].toSvg());
         System.out.println(line.distance());
 
