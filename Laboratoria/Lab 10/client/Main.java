@@ -3,7 +3,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Main {
-
     public static void main(String[] args) {
         ServerThread serverThread = new ServerThread("localhost", 5000);
         serverThread.start();
