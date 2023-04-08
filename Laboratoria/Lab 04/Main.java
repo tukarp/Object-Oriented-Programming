@@ -28,7 +28,7 @@ public class Main {
         //Zadanie 4a
         Person.toDirectory("Lab 4/Zadania/Zadanie4a", personArr);
 
-        // Zadanie 4b
+        //Zadanie 4b
         Person[] parr = Person.fromDirectory("zadanie4a");
         System.out.println("Zadanie 4b");
         for(var p:parr)
