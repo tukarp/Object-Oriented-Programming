@@ -33,12 +33,12 @@ public class ServerThread extends Thread {
             String message;
             while ((message = reader.readLine()) != null){
                 Dot dot = Dot.fromMessage(message);
-//                String arr[] = message.split(";");
-//                int x = Integer.parseInt(arr[0]);
-//                int y = Integer.parseInt(arr[1]);
-//                String color = arr[2];
-//                int radius = Integer.parseInt(arr[3]);
-//                Dot drawParameters = new Dot(x, y, color, radius);
+                //String arr[] = message.split(";");
+                //int x = Integer.parseInt(arr[0]);
+                //int y = Integer.parseInt(arr[1]);
+                //String color = arr[2];
+                //int radius = Integer.parseInt(arr[3]);
+                //Dot drawParameters = new Dot(x, y, color, radius);
                 draw.accept(dot);
             }
         } catch (IOException e) {
