@@ -3,7 +3,6 @@ package com.company;
 import com.company.person.*;
 
 public class Main {
-
     public static void main(String[] args) {
         PersonPersistenceManager manager = new DirectoryPersonPersistenceManager();
         try {
