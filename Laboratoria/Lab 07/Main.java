@@ -6,7 +6,6 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Main {
-
     public static void main(String[] args) {
         //CustomList<String> list = new CustomList<>();
         List<String> list = new CustomList<>();
