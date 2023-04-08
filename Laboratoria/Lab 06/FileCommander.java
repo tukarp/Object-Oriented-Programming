@@ -1,18 +1,12 @@
 package com.company;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipOutputStream;
 
 public class FileCommander {
     private Path path;
@@ -34,12 +28,11 @@ public class FileCommander {
     }
 
     public static String formatFiltered(String text, String substring) {
+        String result = "";
         int begin = text.indexOf(substring);
         int end = begin + substring.length();
 
         String endMarker = text.startsWith(ConsoleColors.BLUE) ? ConsoleColors.BLUE : ConsoleColors.RESET;
-
-        String result="";
 
         result += text.substring(0, begin);
         result+=ConsoleColors.RED_BOLD;
@@ -69,13 +62,13 @@ public class FileCommander {
                         else return spath;
                     })
                     .map(isFiltered ? spath -> formatFiltered(spath, substring) : spath -> spath)
-                     .collect(Collectors.toList());
+                    .collect(Collectors.toList());
         } catch (IOException e) {
             return new ArrayList<>();
         }
     }
 
-    //Zadanie 3
+    // Zadanie 3
     public List<String> find(String s) {
         try(Stream<Path> stream = Files.walk(path)){
             return stream.filter(currentPath -> currentPath.getFileName().toString().contains(s))
