@@ -23,11 +23,58 @@
 
 ## Teoria
 
-### Klasy
+### Wstęp
 
-- ```public``` (publiczne) - mogą ich bez ograniczeń używać obiekty wszystkich klas,
-- ```protected``` (chronione) - mogą ich bez ograniczeń używać obiekty tej samej klasy lub jej podklas,
-- ```private``` (prywatne) - mogą ich używać jedynie obiekty tej samej klasy.
+```Paradygmaty programowania``` – to różne sposoby, w których dany program lub język programowania może być zorganizowany. Każdy paradygmat składa się z pewnych struktur, cech i opinii na temat tego, jak należy rozwiązywać typowe problemy programistyczne.
+
+```Programowanie obiektowe``` (ang. Object Oriented Programming) - to popularny paradygmat programowania, w którym modelujemy istniejącą rzeczywistość za pomocą obiektów, zamiast stosować tylko funkcje i logikę.
+
+### Obiekty i klasy - Zmienne i metody
+
+- ```zmienne klasy``` - należą do całości klasy, jest tylko jedna kopia każdej,
+- ```instancje zmiennych lub atrybutów``` - dane, które należą do indywidualnych obiektów,
+- ```zmienne składowe``` - odwołują się zarówno do klas, jak i zmiennych instancji,
+- ```metody w klasach``` - należą do całości klas i mają dostęp tylko do zmiennych klas oraz wprowadzanych w wywoływaniu procedur,
+- ```metody instancji``` - należą do indywidualnych obiektów, mają dostęp do zmiennych instancji dla specyficznych obiektów, dla których są wywoływane, wprowadzanych oraz zmiennych klas.
+
+### Rodzaje zmiennych w klasie
+
+- ```publiczne``` (ang. public) - mogą ich bez ograniczeń używać obiekty wszystkich klas,
+- ```chronione``` (ang. protected) - mogą ich bez ograniczeń używać obiekty tej samej klasy lub jej podklas,
+- ```prywatne``` (ang. private) - mogą ich używać jedynie obiekty tej samej klasy.
+
+### Akcesory i mutatory
+
+- ```Akcesor``` (ang. getter) - metoda umożliwiająca dostęp do niepublicznej zmiennej danej klasy.
+- ```Mutator``` (ang. setter) - metoda umożliwiająca modyfikację niepublicznej zmiennej danej klasy.
+
+### Chierarchie klas
+
+- ```klasa bazowa``` (ang. base class) - bądź inaczej nadklasa (ang. superclass) definiuje składowe wspólne dla wszystkich wariantów,
+- ```klasa pochodna``` (ang. derived class / subclass) - definiują pozostałe składowe, które występują tylko w poszczególnych wariantach,
+- ```uogólnienie``` (ang. generalization) -  związek między nadklasą i podklasami.
+
+### Dziedziczenie
+
+- ```dziedziczenie``` (ang. inheritance) -  klasa pochodna dziedziczy wszystkie składowe klasy bazowej,
+- ```przedefiniowanie``` (ang. override) - klasa pochodna podaje nowe definicje metod nadklasy,
+- ```rozszerzenie``` (ang. extends) - ponieważ klasa może zawierać nowe składowe, często mówi się, że podklasa ```rozszerza``` nadklasę.
+
+### Rodzaje obiektów
+
+```Klasa``` - jest definicją obiektu posiadającego właściwości oraz operacje.
+
+```Interfejs``` – jest definicją abstrakcyjnego typu posiadającego jedynie operacje, a nie właściwości.
+
+### Paradygmaty programowania obiektowego
+
+```Abstrakcja``` -  pewnego rodzaju uproszczenie rozpatrywanego problemu, polegające na ograniczeniu zakresu cech manipulowanych obiektów wyłącznie do cech kluczowych dla algorytmu, a jednocześnie niezależnych od implementacji.
+
+```Hermetyzacja``` - polega na ukrywaniu pewnych danych składowych lub metod obiektów danej klasy tak, aby były one dostępne tylko metodom wewnętrznym danej klasy lub funkcjom zaprzyjaźnionym.
+
+```Dziedziczenie``` -  mechanizm współdzielenia funkcjonalności między klasami. Klasa może dziedziczyć po innej klasie, co oznacza, że oprócz swoich własnych atrybutów oraz zachowań, uzyskuje także te pochodzące z klasy, z której dziedziczy.
+
+```Polimorfizm``` - mechanizm pozwalający na używanie wartości, zmiennych i podprogramów na kilka różnych sposobów. Jest to możliwość wyabstrahowania wyrażeń od konkretnych typów.
 
 ## Java
 
@@ -71,9 +118,9 @@ Typy dzielą się na dwie kategorie:
     - ```byte```, ```short```, ```int```, ```long```, ```char``` - typy całkowitoliczbowe,
     - ```float```, ```double``` - typy zmiennopozycyjne.
 - ```referencyjne```
-    - ```class``` - typy klas,
-    - ```interface``` - typy interfejsów,
-    - ```array``` - typy tablic.
+    - ```class``` - typ klas,
+    - ```interface``` - typ interfejsów,
+    - ```array``` - typ tablic.
 
 ### Zmienne
 
@@ -88,6 +135,272 @@ Rodzaje zmiennych:
     - ```metod```,
     - ```konstruktorów```,
     - ```obsługi wyjątków```.
+
+### Instrukcje
+
+Instrukcja powrotu:
+```
+return;
+```
+
+Instrukcja przerwij;
+```
+break;
+```
+
+Instrukcja kontynuuj:
+```
+continue;
+```
+
+Instrukcja deklaracji zmiennej lokalnej:
+```
+int x = 10;
+```
+
+Instrukcja deklaracji zmiennej tablicowej:
+```
+int[] array = new int[10]; 
+```
+
+Instrukcja zgłoszenia wyjątku:
+```
+throw new Exception();
+```
+
+Instrukcja asercji:
+```
+assert x > 0;
+assert x >= 0: "x (" + x + ") mniejsze od zera";
+```
+
+Instrukcja wyboru:
+```
+switch(x) {
+    case -1: System.out.println(x - 1);
+    case 0: System.out.println(x);
+    case 1: System.out.println(x + 1);
+    default: System.out.println(0);
+}
+```
+
+Instrukcje warunkowe:
+```
+if(x > 0) {
+    System.out.println("X jest większe od 0!");
+} else if(x==0){
+    System.out.println("X jest równe 0!");
+} else {
+    System.out.println("X jest mniejsze od 0!");
+}
+```
+
+Instrukcja spróbuj:
+```
+try {
+    x = 10 / 0;
+} catch (ArithmeticException e){
+  System.out.println("Dzielenie przez zero");
+} finally {
+  System.out.println("Kończymy");
+}
+```
+
+### Pętle
+
+Pętla ```for```:
+```
+for(int i = 0; i < 10; i++) {
+    System.out.println(i);
+}
+```
+
+Pętla ```while```:
+```
+int i = 0;
+while(x < 10) {
+    System.out.println(i);
+    x++;
+}
+```
+
+Pętla ```do```:
+```
+int i = 0;
+do {
+    System.out.println(i);
+    i++;
+} while (i < 10);
+```
+
+### Klasy
+
+Definicja klasy:
+```
+class Person {
+    private String name;
+    private String surname;
+    private int age;
+}
+```
+
+Definicja interfejsu:
+```
+abstract class Person {
+    public void sayHello() {
+        System.out.println("Hello");
+    }
+}
+```
+
+Definicja podstawowych metod klasy:
+```
+class Person {
+    private String name;
+    private String surname;
+    private int age;
+
+    void setName(String name) {
+        this.name = name;
+    }
+
+    void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    void setAge(int age) {
+        this.age = age;
+    }
+
+    String getName() {
+        return name;
+    }
+
+    String getSurname() {
+        return surname;
+    }
+
+    int getAge() {
+        return age;
+    }
+}
+```
+
+Utworzenie obiektu klasy:
+```
+Person person = new Person("Jan", "Kowalski" 20);
+```
+
+### Dziedziczenie i interfejsy
+
+Dziedziczenie po klasie:
+```
+class Cat extends Mammal
+```
+
+Dziedziczenie po interfejsie:
+```
+class Car implements Vehicle
+```
+
+Dziedziczenie po klasie i interfejsie:
+```
+class Coffe extends Drink implements Bitter
+```
+
+Słowo kluczowe ```super``` - służy do wywoływania metod nadklasy i uzyskiwania dostępu do konstruktora nadklasy.
+
+### Wyjątki
+
+Obsługa wyjątków:
+```
+try {
+    // komenda która może zgłosić wyjątki
+} catch (Exception1 exception) {
+  // obsługa wyjątków Exception1
+} catch (Exception2 exception) {
+  // obsługa wyjątków Exception2
+} catch (Exception3 exception) {
+  // obsługa wyjątków Exception3
+} finally {
+    // możliwe zwolnienie zasobów
+}
+```
+
+Klasa wyjątku:
+```
+class ExceptionOne extends Exception {}
+```
+
+Funkcja wyrzucająca wyjątek:
+```
+public static void main(String[] args) throws Exception {}
+```
+
+### Kolekcje
+
+Interfejs Collection:
+```
+public interface Collection<E> extends Iterable<E> {
+    // ...
+}
+```
+
+Sprawdzenie rozmiaru:
+```
+boolean isEmpty()
+int size()
+```
+
+Wstawianie elementów:
+```
+boolean add(E e)
+boolean addAll(Collection<? extends E> c)
+```
+
+Sprawdzanie zawartości:
+```
+boolean contains(Object o)
+boolean containsAll(Collection<?> c)
+```
+
+Usuwanie elementów:
+```
+boolean remove(Object o)
+boolean removeAll(Collection<?> c)
+```
+
+Petla ```dla każdego```:
+```
+for(type id : expression {
+    instruction
+}
+```
+
+### Iteratory
+
+Klasa iteratora:
+```
+public interface Iterator<E> {
+    boolean hasNext();
+    void remove();
+    E next;
+}
+```
+
+## Źródła
+
+```
+https://wazniak.mimuw.edu.pl
+```
+
+```
+https://pl.wikipedia.org/
+```
+
+```
+https://stormit.pl/programowanie-obiektowe/
+```
 
 ## Laboratorium 1 - Klasa i obiekt
 
