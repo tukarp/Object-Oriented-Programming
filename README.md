@@ -25,9 +25,14 @@
 
 ### Wstęp
 
-```Paradygmaty programowania``` – to różne sposoby, w których dany program lub język programowania może być zorganizowany. Każdy paradygmat składa się z pewnych struktur, cech i opinii na temat tego, jak należy rozwiązywać typowe problemy programistyczne.
+- ```paradygmaty programowania``` – to różne sposoby, w których dany program lub język programowania może być zorganizowany. Każdy paradygmat składa się z pewnych struktur, cech i opinii na temat tego, jak należy rozwiązywać typowe problemy programistyczne,
 
-```Programowanie obiektowe``` (ang. Object Oriented Programming) - to popularny paradygmat programowania, w którym modelujemy istniejącą rzeczywistość za pomocą obiektów, zamiast stosować tylko funkcje i logikę.
+- ```programowanie obiektowe``` (ang. Object Oriented Programming) - to popularny paradygmat programowania, w którym modelujemy istniejącą rzeczywistość za pomocą obiektów, zamiast stosować tylko funkcje i logikę,
+
+- ```sprzężenie``` - jest miarą jak bardzo obiekty, podsystemy lub systemy zależą od siebie nawzajem,
+
+- ```spójność``` (ang. cohesion) -  to miara jak funkcjonalnie powiązane są metody danej klasy.
+
 
 ### Obiekty i klasy - Zmienne i metody
 
@@ -45,8 +50,8 @@
 
 ### Akcesory i mutatory
 
-- ```Akcesor``` (ang. getter) - metoda umożliwiająca dostęp do niepublicznej zmiennej danej klasy.
-- ```Mutator``` (ang. setter) - metoda umożliwiająca modyfikację niepublicznej zmiennej danej klasy.
+- ```akcesor``` (ang. getter) - metoda umożliwiająca dostęp do niepublicznej zmiennej danej klasy.
+- ```mutator``` (ang. setter) - metoda umożliwiająca modyfikację niepublicznej zmiennej danej klasy.
 
 ### Chierarchie klas
 
@@ -56,25 +61,21 @@
 
 ### Dziedziczenie
 
-- ```dziedziczenie``` (ang. inheritance) -  klasa pochodna dziedziczy wszystkie składowe klasy bazowej,
+- ```dziedziczenie``` (ang. inheritance) - klasa pochodna dziedziczy wszystkie składowe klasy bazowej,
 - ```przedefiniowanie``` (ang. override) - klasa pochodna podaje nowe definicje metod nadklasy,
 - ```rozszerzenie``` (ang. extends) - ponieważ klasa może zawierać nowe składowe, często mówi się, że podklasa ```rozszerza``` nadklasę.
 
 ### Rodzaje obiektów
 
-```Klasa``` - jest definicją obiektu posiadającego właściwości oraz operacje.
-
-```Interfejs``` – jest definicją abstrakcyjnego typu posiadającego jedynie operacje, a nie właściwości.
+- ```klasa``` - jest definicją obiektu posiadającego właściwości oraz operacje,
+- ```interfejs``` – jest definicją abstrakcyjnego typu posiadającego jedynie operacje, a nie właściwości.
 
 ### Paradygmaty programowania obiektowego
 
-```Abstrakcja``` -  pewnego rodzaju uproszczenie rozpatrywanego problemu, polegające na ograniczeniu zakresu cech manipulowanych obiektów wyłącznie do cech kluczowych dla algorytmu, a jednocześnie niezależnych od implementacji.
-
-```Hermetyzacja``` - polega na ukrywaniu pewnych danych składowych lub metod obiektów danej klasy tak, aby były one dostępne tylko metodom wewnętrznym danej klasy lub funkcjom zaprzyjaźnionym.
-
-```Dziedziczenie``` -  mechanizm współdzielenia funkcjonalności między klasami. Klasa może dziedziczyć po innej klasie, co oznacza, że oprócz swoich własnych atrybutów oraz zachowań, uzyskuje także te pochodzące z klasy, z której dziedziczy.
-
-```Polimorfizm``` - mechanizm pozwalający na używanie wartości, zmiennych i podprogramów na kilka różnych sposobów. Jest to możliwość wyabstrahowania wyrażeń od konkretnych typów.
+- ```abstrakcja``` -  pewnego rodzaju uproszczenie rozpatrywanego problemu, polegające na ograniczeniu zakresu cech manipulowanych obiektów wyłącznie do cech kluczowych dla algorytmu, a jednocześnie niezależnych od implementacji,
+- ```hermetyzacja``` - polega na ukrywaniu pewnych danych składowych lub metod obiektów danej klasy tak, aby były one dostępne tylko metodom wewnętrznym danej klasy lub funkcjom zaprzyjaźnionym,
+- ```dziedziczenie``` -  mechanizm współdzielenia funkcjonalności między klasami. Klasa może dziedziczyć po innej klasie, co oznacza, że oprócz swoich własnych atrybutów oraz zachowań, uzyskuje także te pochodzące z klasy, z której dziedziczy,
+- ```polimorfizm``` - mechanizm pozwalający na używanie wartości, zmiennych i podprogramów na kilka różnych sposobów. Jest to możliwość wyabstrahowania wyrażeń od konkretnych typów.
 
 ## Java
 
@@ -112,7 +113,6 @@
 
 ### Typy
 
-Typy dzielą się na dwie kategorie:
 - ```pierwotne```
     - ```boolean``` - typ logiczny,
     - ```byte```, ```short```, ```int```, ```long```, ```char``` - typy całkowitoliczbowe,
@@ -124,7 +124,6 @@ Typy dzielą się na dwie kategorie:
 
 ### Zmienne
 
-Rodzaje zmiennych:
 - ```zmienne```
     - ```klasowe```,
     - ```egzemplarzowe```,
@@ -138,43 +137,43 @@ Rodzaje zmiennych:
 
 ### Instrukcje
 
-Instrukcja powrotu:
+Instrukcja ```return```
 ```
 return;
 ```
 
-Instrukcja przerwij;
+Instrukcja ```break```
 ```
 break;
 ```
 
-Instrukcja kontynuuj:
+Instrukcja ```continue```
 ```
 continue;
 ```
 
-Instrukcja deklaracji zmiennej lokalnej:
+Instrukcja deklaracji ```zmiennej lokalnej```
 ```
 int x = 10;
 ```
 
-Instrukcja deklaracji zmiennej tablicowej:
+Instrukcja deklaracji ```zmiennej tablicowej```
 ```
 int[] array = new int[10]; 
 ```
 
-Instrukcja zgłoszenia wyjątku:
+Instrukcja zgłoszenia ```wyjątku```
 ```
 throw new Exception();
 ```
 
-Instrukcja asercji:
+Instrukcja ```assert```
 ```
 assert x > 0;
 assert x >= 0: "x (" + x + ") mniejsze od zera";
 ```
 
-Instrukcja wyboru:
+Instrukcja ```switch```
 ```
 switch(x) {
     case -1: System.out.println(x - 1);
@@ -184,7 +183,7 @@ switch(x) {
 }
 ```
 
-Instrukcje warunkowe:
+Instrukcja warunkowa ```if```
 ```
 if(x > 0) {
     System.out.println("X jest większe od 0!");
@@ -195,7 +194,7 @@ if(x > 0) {
 }
 ```
 
-Instrukcja spróbuj:
+Instrukcja ```try```
 ```
 try {
     x = 10 / 0;
@@ -208,14 +207,14 @@ try {
 
 ### Pętle
 
-Pętla ```for```:
+Pętla ```for```
 ```
 for(int i = 0; i < 10; i++) {
     System.out.println(i);
 }
 ```
 
-Pętla ```while```:
+Pętla ```while```
 ```
 int i = 0;
 while(x < 10) {
@@ -224,7 +223,7 @@ while(x < 10) {
 }
 ```
 
-Pętla ```do```:
+Pętla ```do```
 ```
 int i = 0;
 do {
@@ -233,9 +232,9 @@ do {
 } while (i < 10);
 ```
 
-### Klasy
+### Obiekty
 
-Definicja klasy:
+```Klasa```
 ```
 class Person {
     private String name;
@@ -244,7 +243,7 @@ class Person {
 }
 ```
 
-Definicja interfejsu:
+```Interfejs```
 ```
 abstract class Person {
     public void sayHello() {
@@ -253,7 +252,7 @@ abstract class Person {
 }
 ```
 
-Definicja podstawowych metod klasy:
+Definicja podstawowych metod ```klasy```
 ```
 class Person {
     private String name;
@@ -286,100 +285,148 @@ class Person {
 }
 ```
 
-Utworzenie obiektu klasy:
+Utworzenie obiektu ```klasy```
 ```
 Person person = new Person("Jan", "Kowalski" 20);
 ```
 
 ### Dziedziczenie i interfejsy
 
-Dziedziczenie po klasie:
+Dziedziczenie po ```klasie```
 ```
 class Cat extends Mammal
 ```
 
-Dziedziczenie po interfejsie:
+Dziedziczenie po ```interfejsie```
 ```
 class Car implements Vehicle
 ```
 
-Dziedziczenie po klasie i interfejsie:
+Dziedziczenie po ```klasie``` i ```interfejsie```
 ```
 class Coffe extends Drink implements Bitter
 ```
 
-Słowo kluczowe ```super``` - służy do wywoływania metod nadklasy i uzyskiwania dostępu do konstruktora nadklasy.
+```super``` - służy do wywoływania metod nadklasy i uzyskiwania dostępu do konstruktora nadklasy.
 
 ### Wyjątki
 
-Obsługa wyjątków:
+Obsługa ```wyjątków```
 ```
 try {
     // komenda która może zgłosić wyjątki
-} catch (Exception1 exception) {
-  // obsługa wyjątków Exception1
-} catch (Exception2 exception) {
-  // obsługa wyjątków Exception2
-} catch (Exception3 exception) {
-  // obsługa wyjątków Exception3
+} catch (FirstException exception) {
+  // obsługa wyjątków FirstException
+} catch (SecondException exception) {
+  // obsługa wyjątków SecondException
+} catch (ThirdException exception) {
+  // obsługa wyjątków ThirdException
 } finally {
     // możliwe zwolnienie zasobów
 }
 ```
 
-Klasa wyjątku:
+### Klasa wyjątku
+
+```Exception``` - tę klasę rozszerzamy tworząc własne rodzaje wyjątków.
+
+Użycie ```klasy wyjątku```
 ```
 class ExceptionOne extends Exception {}
 ```
 
-Funkcja wyrzucająca wyjątek:
+Funkcja wyrzucająca ```wyjątek```
 ```
 public static void main(String[] args) throws Exception {}
 ```
 
+### Klasy parametryzowane typami
+
+Definiujemy pojęcie pary jako ```typ uogólniony```
+
+```
+ public class Para<T1, T2> {
+   private T1 first;
+   private T2 second;
+   public Para(T1 first, T2 second) {
+     this.first = first;
+     this.second = second;
+   }
+
+   public T1 first() {
+     return first; 
+   }
+    
+   public T2 second() {
+     return second; 
+   }
+    
+   public void first(T1 first) {
+     this.first = first;
+   }
+    
+   public void second(T2 second {
+     this.second = second;
+   }
+ }
+ ```
+
+Metoda parametryzowana typami - mogą występować w zwykłych klasach. Ich deklaracje poprzedzamy podaniem parametrów.
+
 ### Kolekcje
 
-Interfejs Collection:
+Interfejs Collection
 ```
 public interface Collection<E> extends Iterable<E> {
     // ...
 }
 ```
 
-Sprawdzenie rozmiaru:
+Sprawdzenie rozmiaru
 ```
 boolean isEmpty()
+```
+
+```
 int size()
 ```
 
-Wstawianie elementów:
+Wstawianie elementów
 ```
 boolean add(E e)
+```
+
+```
 boolean addAll(Collection<? extends E> c)
 ```
 
-Sprawdzanie zawartości:
+Sprawdzanie zawartości
 ```
 boolean contains(Object o)
+```
+
+```
 boolean containsAll(Collection<?> c)
 ```
 
-Usuwanie elementów:
+Usuwanie elementów
 ```
 boolean remove(Object o)
+```
+
+```
 boolean removeAll(Collection<?> c)
 ```
 
-Petla ```dla każdego```:
+Petla ```for each```
 ```
 for(type id : expression {
     instruction
 }
 ```
 
-### Iteratory
+### Klasa iteratora
 
-Klasa iteratora:
 ```
 public interface Iterator<E> {
     boolean hasNext();
@@ -387,6 +434,55 @@ public interface Iterator<E> {
     E next;
 }
 ```
+
+### Strumienie
+
+```Dekorator``` - strukturalny wzorzec pozwalający na dodawanie obiektom nowych obowiązków w sposób dynamiczny — poprzez “opakowywanie” ich w specjalne obiekty posiadające potrzebną funkcjonalność.
+
+```Strumienie``` (ang. stream) - są używane zarówno do wysyłania/zapisywania jak i pobierania/odczytywania porcji danych danych.
+
+|     Podklasy InputStream i OutputStream       |     Podklasy Reader i Writer      |                             Opis                                |
+| :-------------------------------------------: | :-------------------------------: | :-------------------------------------------------------------: |
+|      FileInputStream i FileOutputStream       |      FileReader i FileWriter      |          Pozwalają odczytywać i zapisywać pliki dyskowe         |
+|  ByteArrayInputStream i ByteArrayOutputStream | CharArrayReader i CharArrayWriter | Bufor w pamięci oparty na tablicy odpowiednio bajtów lub znaków |
+|            StringBufferInputStream            |    StringReader i StringWriter    |           Bufor w pamięci oparty na napisie String              |
+|      FileInputStream i FileOutputStream       |     PipedReader i PipedWriter     |             Łącze do komunikacji między procesami               |
+
+### Strumienie binarne
+
+| Strumienie Binarne                         |     Strumienie Znakowe          |                                                  Opis                                                         |
+| :----------------------------------------: | :-----------------------------: | :-----------------------------------------------------------------------------------------------------------: |
+| BufferedInputStream i BufferedOutputStream | BufferedReader i BufferedWriter |                                  Operacje na strumieniu stają się buforowane                                  |
+|                 PrintStream                |           PrintWriter           |     Dodają wiele nowych metod pozwalających wypisywać do strumienia dane w sposób czytelny dla człowieka      |
+|             PushBackInputStream            |         PushBackReader          |              Dodają nową metodę unread() pozwalającą odesłać z powrotem ostatnio odczytane dane               |
+|           LineNumberInputStream            |        LineNumberReader         |              Dodają nową metodę getLineNumber(), która daje liczbę odczytanych do tej pory linii              |
+|     DataInputStream i DataOutputStream     |               Brak              |       Dodają wiele nowych metod pozwalających przesyłać przez strumień wartości typów podstawowych Javy       |
+|   ObjectInputStream i ObjectOutputStream   |               Brak              | Dodają nowe metody pozwalające przesyłać przez strumień obiekty implementujące interfejs java.io.Serializable |
+|  CheckedInputStream i CheckedOutputStream  |               Brak              |                         Wylicza sumę kontrolną dla danych przesyłanych przez strumień                         |
+|     GZIPInputStream i GZIPOutputStream     |               Brak              |              Dane przesyłane przez strumień są kompresowane przy pomocy prostego algorytmu GZIP               |
+|      ZipInputStream i ZipOutputStream      |               Brak              |                   Dane przesyłane przez strumień są kompresowane przy pomocy algorytmu Zip                    |
+|   CipherInputStream i CipherOutputStream   |               Brak              |        Dane przesyłane przez strumień są szyfrowane lub deszyfrowane przy pomocy obiektu klasy Cipher         |
+
+### Graficzny interfejs użytkownika
+
+- ```BorderLayout``` - Główne kontenery (JApplet, JDialog i JFrame) domyślnie używają BorderLayout. Przy jego pomocy można rozmieścić do pięciu innych komponentów, w tym inne kontenery,
+- ```FlowLayout``` - Zmianę zarządcy układu wykonuje się przy pomocy metody setLayout(LayoutManager).
+- ```GridLayout``` - układa komponenty w komórkach siatki, której rozmiar określamy przy pomocy parametrów konstruktora,
+` ```BoxLayout``` - komponenty są umieszczane w jednym wierszu lub w jednej kolumnie, zagnieżdżając w sobie kontenery używające BoxLayout można uzyskać bardzo skomplikowane układy,
+```GridBagLayout``` - rozbudowany zarządca dający bardzo duże możliwości zapanowania nad rozmieszczeniem komponentów, doskonale nadaje się używania przez graficzne narzędzia przeznaczone do budowanie GUI metodą przeciągnij i upuść,
+- ```SpringLayout``` – rozmieszczenie komponentów jest kontrolowane przez definicje więzów, które wyznaczają pionową lub poziomą odległość między krawędziami dwóch komponentów,
+- ```CardLayout``` – umożliwia proste przełączanie wyświetlanych komponentów w trakcie działania programu. Każdy komponent dodany do kontenera używającego CardLayout traktowany jest jak kartka.
+
+### Najważniejsze rodzaje zdarzeń
+
+| Interfejs obserwatora |             Metody             |                             Opis                             |
+| :-------------------: | :----------------------------: | :----------------------------------------------------------: |
+|    ActionListener     | actionPerformed(ActionEvent e) | Dotyczy komponentów różnego rodzaju. Zachodzi np. gdy użytkownik klika przycisk, zatwierdza enterem tekst wpisany do pola tekstowego lub wybiera pozycję z menu |
+|     MouseListener     | mouseClicked(MouseEvent e), mouseEntered(MouseEvent e), mouseExited(MouseEvent e), mousePressed(MouseEvent e), mouseReleased(MouseEvent e) | Zdarzenia dotyczą operacji wykonywanych myszką na komponencie jak: wciśnięcie przycisku, puszczenie przycisku, kliknięcie |
+|  MouseMotionListener  | mouseDragged(MouseEvent e), mouseMoved(MouseEvent e) | Zdarzenia dotyczą ruchów kursora myszy nad komponentem oraz ruchów kursora myszy podczas przytrzymywania przycisku |
+|      KeyListener      | keyPressed(KeyEvent e), keyReleased(KeyEvent e), keyTyped(KeyEvent e) | Zdarzenia informujące o wciśnięciu, puszczeniu i kliknięciu klawisza na klawiaturze |
+|     TextListener      | textValueChanged(TextEvent e)  | Dotyczy komponentów rozszerzających JTextComponent |
+|    WindowListener     | windowActivated(WindowEvent e), windowClosed(WindowEvent e), windowClosing(WindowEvent e), windowDeactivated(WindowEvent e), windowDeiconified(WindowEvent e), windowIconified(WindowEvent e), windowOpened(WindowEvent e) | Zdarzenia dotyczące okien. Można m.in. zorientować się kiedy okno staje się/przestaje być aktywne, kiedy jest minimalizowane/przywracane do normalnego rozmiaru oraz kiedy jest otwierane po raz pierwszy/zamykane |
 
 ## Źródła
 
@@ -400,6 +496,10 @@ https://pl.wikipedia.org/
 
 ```
 https://stormit.pl/programowanie-obiektowe/
+```
+
+```
+https://refactoring.guru/
 ```
 
 ## Laboratorium 1 - Klasa i obiekt
