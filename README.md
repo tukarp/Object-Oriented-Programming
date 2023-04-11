@@ -468,8 +468,8 @@ public interface Iterator<E> {
 - ```BorderLayout``` - Główne kontenery (JApplet, JDialog i JFrame) domyślnie używają BorderLayout. Przy jego pomocy można rozmieścić do pięciu innych komponentów, w tym inne kontenery,
 - ```FlowLayout``` - Zmianę zarządcy układu wykonuje się przy pomocy metody setLayout(LayoutManager).
 - ```GridLayout``` - układa komponenty w komórkach siatki, której rozmiar określamy przy pomocy parametrów konstruktora,
-` ```BoxLayout``` - komponenty są umieszczane w jednym wierszu lub w jednej kolumnie, zagnieżdżając w sobie kontenery używające BoxLayout można uzyskać bardzo skomplikowane układy,
-```GridBagLayout``` - rozbudowany zarządca dający bardzo duże możliwości zapanowania nad rozmieszczeniem komponentów, doskonale nadaje się używania przez graficzne narzędzia przeznaczone do budowanie GUI metodą przeciągnij i upuść,
+- ```BoxLayout``` - komponenty są umieszczane w jednym wierszu lub w jednej kolumnie, zagnieżdżając w sobie kontenery używające BoxLayout można uzyskać bardzo skomplikowane układy,
+- ```GridBagLayout``` - rozbudowany zarządca dający bardzo duże możliwości zapanowania nad rozmieszczeniem komponentów, doskonale nadaje się używania przez graficzne narzędzia przeznaczone do budowanie GUI metodą przeciągnij i upuść,
 - ```SpringLayout``` – rozmieszczenie komponentów jest kontrolowane przez definicje więzów, które wyznaczają pionową lub poziomą odległość między krawędziami dwóch komponentów,
 - ```CardLayout``` – umożliwia proste przełączanie wyświetlanych komponentów w trakcie działania programu. Każdy komponent dodany do kontenera używającego CardLayout traktowany jest jak kartka.
 
