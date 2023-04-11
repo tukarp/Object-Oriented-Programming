@@ -19,6 +19,37 @@
 - [Lab 13 - Bazy danych](#laboratorium-13---bazy-danych)
 - [Lab 14 - Powtórzenie 2](#laboratorium-14---powtórzenie-2)
 
+### Notatki
+
+- [Notatki](#notatki-1)
+- [Teoria](#teoria)
+    - [Wstęp](#wstęp)
+    - [Obiekty i klasy - Zmienne i metody](#obiekty-i-klasy---zmienne-i-metody)
+    - [Rodzaje zmiennych w klasie](#rodzaje-zmiennych-w-klasie)
+    - [Akcesory i mutatory](#akcesory-i-mutatory)
+    - [Chierarchie klas](#chierarchie-klas)
+    - [Dziedziczenie](#dziedziczenie)
+    - [Rodzaje obiektów](#rodzaje-obiektów)
+    - [Paradygmaty programowania obiektowego](#paradygmaty-programowania-obiektowego)
+- [Java](#java)
+    - [Słowa kluczowe](#słowa-kluczowe)
+    - [Operatory](#operatory)
+    - [Typy](#typy)
+    - [Zmienne](#zmienne)
+    - [Instrukcje](instrukcje)
+    - [Pętle](#pętle)
+    - [Obiekty](#obiekty)
+    - [Dziedziczenie i interfejsy](#dziedziczenie-i-interfejsy)
+    - [Wyjątki](#wyjątki)
+    - [Klasa wyjątku](#klasa-wyjątku)
+    - [Klasy parametryzowane typami](#klasy-parametryzowane-typami)
+    - [Kolekcje](#kolekcje)
+    - [Klasa iteratora](#klasa-iteratora)
+    - [Strumienie](#strumienie)
+    - [Strumienie binarne](#strumienie-binarne)
+    - [Graficzny interfejs użytkownika](#graficzny-interfejs-użytkownika)
+    - [Najważniejsze rodzaje zdarzeń](#najważniejsze-rodzaje-zdarzeń)
+
 # Notatki
 
 ## Teoria
