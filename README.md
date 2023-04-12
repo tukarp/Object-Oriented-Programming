@@ -56,57 +56,57 @@
 
 ### Wstęp
 
-- ```paradygmaty programowania``` – to różne sposoby, w których dany program lub język programowania może być zorganizowany. Każdy paradygmat składa się z pewnych struktur, cech i opinii na temat tego, jak należy rozwiązywać typowe problemy programistyczne,
+- ```Paradygmaty Programowania``` – to różne sposoby, w których dany program lub język programowania może być zorganizowany. Każdy paradygmat składa się z pewnych struktur, cech i opinii na temat tego, jak należy rozwiązywać typowe problemy programistyczne.
 
-- ```programowanie obiektowe``` (ang. Object Oriented Programming) - to popularny paradygmat programowania, w którym modelujemy istniejącą rzeczywistość za pomocą obiektów, zamiast stosować tylko funkcje i logikę,
+- ```Programowanie Obiektowe``` (ang. Object Oriented Programming) - to popularny paradygmat programowania, w którym modelujemy istniejącą rzeczywistość za pomocą obiektów, zamiast stosować tylko funkcje i logikę.
 
-- ```sprzężenie``` - jest miarą jak bardzo obiekty, podsystemy lub systemy zależą od siebie nawzajem,
+- ```Sprzężenie``` - jest miarą jak bardzo obiekty, podsystemy lub systemy zależą od siebie nawzajem.
 
-- ```spójność``` (ang. cohesion) -  to miara jak funkcjonalnie powiązane są metody danej klasy.
+- ```Spójność``` (ang. cohesion) -  to miara jak funkcjonalnie powiązane są metody danej klasy.
 
 
 ### Obiekty i klasy - Zmienne i metody
 
-- ```zmienne klasy``` - należą do całości klasy, jest tylko jedna kopia każdej,
-- ```instancje zmiennych lub atrybutów``` - dane, które należą do indywidualnych obiektów,
-- ```zmienne składowe``` - odwołują się zarówno do klas, jak i zmiennych instancji,
-- ```metody w klasach``` - należą do całości klas i mają dostęp tylko do zmiennych klas oraz wprowadzanych w wywoływaniu procedur,
-- ```metody instancji``` - należą do indywidualnych obiektów, mają dostęp do zmiennych instancji dla specyficznych obiektów, dla których są wywoływane, wprowadzanych oraz zmiennych klas.
+- ```Zmienne Klasy``` - należą do całości klasy, jest tylko jedna kopia każdej.
+- ```Instancje Zmiennych lub Atrybutów``` - dane, które należą do indywidualnych obiektów.
+- ```Zmienne Składowe``` - odwołują się zarówno do klas, jak i zmiennych instancji.
+- ```Metody w Klasach``` - należą do całości klas i mają dostęp tylko do zmiennych klas oraz wprowadzanych w wywoływaniu procedur.
+- ```Metody Instancji``` - należą do indywidualnych obiektów, mają dostęp do zmiennych instancji dla specyficznych obiektów, dla których są wywoływane, wprowadzanych oraz zmiennych klas.
 
 ### Rodzaje zmiennych w klasie
 
-- ```publiczne``` (ang. public) - mogą ich bez ograniczeń używać obiekty wszystkich klas,
-- ```chronione``` (ang. protected) - mogą ich bez ograniczeń używać obiekty tej samej klasy lub jej podklas,
-- ```prywatne``` (ang. private) - mogą ich używać jedynie obiekty tej samej klasy.
+- ```Publiczne``` (ang. public) - mogą ich bez ograniczeń używać obiekty wszystkich klas.
+- ```Chronione``` (ang. protected) - mogą ich bez ograniczeń używać obiekty tej samej klasy lub jej podklas.
+- ```Prywatne``` (ang. private) - mogą ich używać jedynie obiekty tej samej klasy.
 
 ### Akcesory i mutatory
 
-- ```akcesor``` (ang. getter) - metoda umożliwiająca dostęp do niepublicznej zmiennej danej klasy.
-- ```mutator``` (ang. setter) - metoda umożliwiająca modyfikację niepublicznej zmiennej danej klasy.
+- ```Akcesor``` (ang. getter) - metoda umożliwiająca dostęp do niepublicznej zmiennej danej klasy.
+- ```Mutator``` (ang. setter) - metoda umożliwiająca modyfikację niepublicznej zmiennej danej klasy.
 
 ### Chierarchie klas
 
-- ```klasa bazowa``` (ang. base class) - bądź inaczej nadklasa (ang. superclass) definiuje składowe wspólne dla wszystkich wariantów,
-- ```klasa pochodna``` (ang. derived class / subclass) - definiują pozostałe składowe, które występują tylko w poszczególnych wariantach,
-- ```uogólnienie``` (ang. generalization) -  związek między nadklasą i podklasami.
+- ```Klasa Bazowa``` (ang. base class) - bądź inaczej nadklasa (ang. superclass) definiuje składowe wspólne dla wszystkich wariantów.
+- ```Klasa Pochodna``` (ang. derived class / subclass) - definiują pozostałe składowe, które występują tylko w poszczególnych wariantach.
+- ```Uogólnienie``` (ang. generalization) -  związek między nadklasą i podklasami.
 
 ### Dziedziczenie
 
-- ```dziedziczenie``` (ang. inheritance) - klasa pochodna dziedziczy wszystkie składowe klasy bazowej,
-- ```przedefiniowanie``` (ang. override) - klasa pochodna podaje nowe definicje metod nadklasy,
-- ```rozszerzenie``` (ang. extends) - ponieważ klasa może zawierać nowe składowe, często mówi się, że podklasa ```rozszerza``` nadklasę.
+- ```Dziedziczenie``` (ang. inheritance) - klasa pochodna dziedziczy wszystkie składowe klasy bazowej.
+- ```Przedefiniowanie``` (ang. override) - klasa pochodna podaje nowe definicje metod nadklasy.
+- ```Rozszerzenie``` (ang. extends) - ponieważ klasa może zawierać nowe składowe, często mówi się, że podklasa ```rozszerza``` nadklasę.
 
 ### Rodzaje obiektów
 
-- ```klasa``` - jest definicją obiektu posiadającego właściwości oraz operacje,
-- ```interfejs``` – jest definicją abstrakcyjnego typu posiadającego jedynie operacje, a nie właściwości.
+- ```Klasa``` - jest definicją obiektu posiadającego właściwości oraz operacje.
+- ```Interfejs``` – jest definicją abstrakcyjnego typu posiadającego jedynie operacje, a nie właściwości.
 
 ### Paradygmaty programowania obiektowego
 
-- ```abstrakcja``` -  pewnego rodzaju uproszczenie rozpatrywanego problemu, polegające na ograniczeniu zakresu cech manipulowanych obiektów wyłącznie do cech kluczowych dla algorytmu, a jednocześnie niezależnych od implementacji,
-- ```hermetyzacja``` - polega na ukrywaniu pewnych danych składowych lub metod obiektów danej klasy tak, aby były one dostępne tylko metodom wewnętrznym danej klasy lub funkcjom zaprzyjaźnionym,
-- ```dziedziczenie``` -  mechanizm współdzielenia funkcjonalności między klasami. Klasa może dziedziczyć po innej klasie, co oznacza, że oprócz swoich własnych atrybutów oraz zachowań, uzyskuje także te pochodzące z klasy, z której dziedziczy,
-- ```polimorfizm``` - mechanizm pozwalający na używanie wartości, zmiennych i podprogramów na kilka różnych sposobów. Jest to możliwość wyabstrahowania wyrażeń od konkretnych typów.
+- ```Abstrakcja``` -  pewnego rodzaju uproszczenie rozpatrywanego problemu, polegające na ograniczeniu zakresu cech manipulowanych obiektów wyłącznie do cech kluczowych dla algorytmu, a jednocześnie niezależnych od implementacji.
+- ```Hermetyzacja``` - polega na ukrywaniu pewnych danych składowych lub metod obiektów danej klasy tak, aby były one dostępne tylko metodom wewnętrznym danej klasy lub funkcjom zaprzyjaźnionym.
+- ```Dziedziczenie``` -  mechanizm współdzielenia funkcjonalności między klasami. Klasa może dziedziczyć po innej klasie, co oznacza, że oprócz swoich własnych atrybutów oraz zachowań, uzyskuje także te pochodzące z klasy, z której dziedziczy.
+- ```Polimorfizm``` - mechanizm pozwalający na używanie wartości, zmiennych i podprogramów na kilka różnych sposobów. Jest to możliwość wyabstrahowania wyrażeń od konkretnych typów.
 
 ## Java
 
@@ -144,27 +144,27 @@
 
 ### Typy
 
-- ```pierwotne```
+- ```Pierwotne```
     - ```boolean``` - typ logiczny,
     - ```byte```, ```short```, ```int```, ```long```, ```char``` - typy całkowitoliczbowe,
     - ```float```, ```double``` - typy zmiennopozycyjne.
-- ```referencyjne```
+- ```Referencyjne```
     - ```class``` - typ klas,
     - ```interface``` - typ interfejsów,
     - ```array``` - typ tablic.
 
 ### Zmienne
 
-- ```zmienne```
-    - ```klasowe```,
-    - ```egzemplarzowe```,
-    - ```lokalne```,
-- ```elementy```
-     - ```tablicy(anonimowe)```,
-- ```parametry```
-    - ```metod```,
-    - ```konstruktorów```,
-    - ```obsługi wyjątków```.
+- ```Zmienne```
+    - ```Klasowe```,
+    - ```Egzemplarzowe```,
+    - ```Lokalne```,
+- ```Elementy```
+     - ```Tablicy (anonimowe)```,
+- ```Parametry```
+    - ```Metod```,
+    - ```Konstruktorów```,
+    - ```Obsługi wyjątków```.
 
 ### Instrukcje
 
@@ -402,7 +402,7 @@ Definiujemy pojęcie pary jako ```typ uogólniony```
  }
  ```
 
-Metoda parametryzowana typami - mogą występować w zwykłych klasach. Ich deklaracje poprzedzamy podaniem parametrów.
+```Metoda parametryzowana typami``` - mogą występować w zwykłych klasach. Ich deklaracje poprzedzamy podaniem parametrów.
 
 ### Kolekcje
 
