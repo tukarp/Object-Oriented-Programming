@@ -23,7 +23,7 @@ Dodaj obiekty klas Server i ServerThread do kontrolera okna za pomocą parametr�
 Zdefiniuj połączenie z bazą danych i utwórz w niej następującą tabelę:
 
 ```
-CREATE TABLE dot(
+CREATE TABLE dot (
     id     INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     x      INTEGER NOT NULL,
     y      INTEGER NOT NULL,
