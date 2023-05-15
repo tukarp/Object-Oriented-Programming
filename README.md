@@ -230,9 +230,9 @@ Instrukcja ```try```
 try {
     x = 10 / 0;
 } catch (ArithmeticException e){
-  System.out.println("Dzielenie przez zero");
+    System.out.println("Dzielenie przez zero");
 } finally {
-  System.out.println("Kończymy");
+    System.out.println("Kończymy");
 }
 ```
 
@@ -347,11 +347,11 @@ Obsługa ```wyjątków```
 try {
     // komenda która może zgłosić wyjątki
 } catch (FirstException exception) {
-  // obsługa wyjątków FirstException
+    // obsługa wyjątków FirstException
 } catch (SecondException exception) {
-  // obsługa wyjątków SecondException
+    // obsługa wyjątków SecondException
 } catch (ThirdException exception) {
-  // obsługa wyjątków ThirdException
+    // obsługa wyjątków ThirdException
 } finally {
     // możliwe zwolnienie zasobów
 }
@@ -402,7 +402,7 @@ Definiujemy pojęcie pary jako ```typ uogólniony```
  }
  ```
 
-```Metoda parametryzowana typami``` - mogą występować w zwykłych klasach. Ich deklaracje poprzedzamy podaniem parametrów.
+```Metoda parametryzowana typami``` - może występować w zwykłych klasach. Jej deklaracje poprzedzamy podaniem parametrów.
 
 ### Kolekcje
 
@@ -470,7 +470,7 @@ public interface Iterator<E> {
 
 ```Dekorator``` - strukturalny wzorzec pozwalający na dodawanie obiektom nowych obowiązków w sposób dynamiczny — poprzez “opakowywanie” ich w specjalne obiekty posiadające potrzebną funkcjonalność.
 
-```Strumienie``` (ang. stream) - są używane zarówno do wysyłania/zapisywania jak i pobierania/odczytywania porcji danych danych.
+```Strumienie``` (ang. stream) - są używane zarówno do wysyłania / zapisywania jak i pobierania / odczytywania porcji danych danych.
 
 |     Podklasy InputStream i OutputStream       |     Podklasy Reader i Writer      |                             Opis                                |
 | :-------------------------------------------: | :-------------------------------: | :-------------------------------------------------------------: |
@@ -496,8 +496,8 @@ public interface Iterator<E> {
 
 ### Graficzny interfejs użytkownika
 
-- ```BorderLayout``` - Główne kontenery (JApplet, JDialog i JFrame) domyślnie używają BorderLayout. Przy jego pomocy można rozmieścić do pięciu innych komponentów, w tym inne kontenery,
-- ```FlowLayout``` - Zmianę zarządcy układu wykonuje się przy pomocy metody setLayout(LayoutManager).
+- ```BorderLayout``` - główne kontenery (JApplet, JDialog i JFrame) domyślnie używają BorderLayout. Przy jego pomocy można rozmieścić do pięciu innych komponentów, w tym inne kontenery,
+- ```FlowLayout``` - zmianę zarządcy układu wykonuje się przy pomocy metody setLayout(LayoutManager).
 - ```GridLayout``` - układa komponenty w komórkach siatki, której rozmiar określamy przy pomocy parametrów konstruktora,
 - ```BoxLayout``` - komponenty są umieszczane w jednym wierszu lub w jednej kolumnie, zagnieżdżając w sobie kontenery używające BoxLayout można uzyskać bardzo skomplikowane układy,
 - ```GridBagLayout``` - rozbudowany zarządca dający bardzo duże możliwości zapanowania nad rozmieszczeniem komponentów, doskonale nadaje się używania przez graficzne narzędzia przeznaczone do budowanie GUI metodą przeciągnij i upuść,
