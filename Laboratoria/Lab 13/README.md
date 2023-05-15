@@ -6,9 +6,9 @@ Utwórz bazę SQLite składającą się z pojedynczej tabeli:
 
 ```
 CREATE TABLE person (
-id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-first_name TEXT NOT NULL,
-last_name TEXT NOT NULL
+  id         INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+  first_name TEXT NOT NULL,
+  last_name  TEXT NOT NULL
 );
 ```
 
