@@ -16,7 +16,7 @@ Niech działanie klienta rozpoczyna się zawsze od wpisania loginu. Login powini
 
 ### Zadanie 3b
 
-Jeżeli użytkownik wpisze /online, powinien otrzymać listę aktualnie zalogowanych użytkowników.
+Jeżeli użytkownik wpisze “/online”, powinien otrzymać listę aktualnie zalogowanych użytkowników.
 
 ### Zadanie 4a
 
@@ -24,8 +24,8 @@ Niech wszystkie wiadomości użytkowników w czacie rozpoczynają się od ich lo
 
 ### Zadanie 4b
 
-Jeżeli użytkownik napisze w czacie /w recipient message, gdzie recipient jest loginem odbiorcy, a message wysłaną wiadomością, należy przesłać tą wiadomość wyłącznie wybranemu odbiorcy. Jeżeli nie jest on zalogowany, należy wyświetlić nadawcy stosowną informację.
+Jeżeli użytkownik napisze w czacie “/w recipient message”, gdzie recipient jest loginem odbiorcy, a message wysłaną wiadomością, należy przesłać tą wiadomość wyłącznie wybranemu odbiorcy. Jeżeli nie jest on zalogowany, należy wyświetlić nadawcy stosowną informację.
 
 ### Zadanie 5
 
-Jeżeli użytkownik napisze w czacie /file recipient path, gdzie recipient jest loginem odbiorcy, a path ścieżką do pliku, należy przesłać ten plik odbiorcy. Podczas przesyłania należy prezentować aktualny, procentowy, postęp kopiowania. Jeżeli odbiorca nie jest zalogowany, należy wyświetlić nadawcy stosowną informację.
+Jeżeli użytkownik napisze w czacie “/file recipient path", gdzie recipient jest loginem odbiorcy, a path ścieżką do pliku, należy przesłać ten plik odbiorcy. Podczas przesyłania należy prezentować aktualny, procentowy, postęp kopiowania. Jeżeli odbiorca nie jest zalogowany, należy wyświetlić nadawcy stosowną informację.

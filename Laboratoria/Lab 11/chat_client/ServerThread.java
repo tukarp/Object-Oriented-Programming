@@ -28,7 +28,7 @@ public class ServerThread extends Thread {
             BufferedReader reader = new BufferedReader(new InputStreamReader(input));
             writer = new PrintWriter(output, true);
             String message;
-            while ((message = reader.readLine()) != null){
+            while((message = reader.readLine()) != null){
                 String prefix = message.substring(0,2);
                 String postfix = message.substring(2);
                 System.out.println(message);
@@ -61,15 +61,15 @@ public class ServerThread extends Thread {
     }
 
     public void login(String name) {
-        writer.println("LO"+name);
+        writer.println("LO" + name);
     }
 
     public void broadcast(String message) {
-        writer.println("BR"+message);
+        writer.println("BR" + message);
     }
 
     public void whisper(String message) {
-        writer.println("WH"+message);
+        writer.println("WH" + message);
     }
 
     public void online() {
@@ -86,17 +86,17 @@ public class ServerThread extends Thread {
 
         try {
             long fileSize = file.length();
-            writer.println("FI"+recipientName+" "+fileSize+" "+file.getName());
+            writer.println("FI" + recipientName + " " + fileSize + " " + file.getName());
             FileInputStream fileIn = new FileInputStream(file);
             DataOutputStream fileOut = new DataOutputStream(socket.getOutputStream());
             byte[] buffer = new byte[64];
             int count;
             long sentSize = 0;
 
-            while ((count = fileIn.read(buffer)) > 0) {
-                fileOut.write(buffer,0,count);
+            while((count = fileIn.read(buffer)) > 0) {
+                fileOut.write(buffer, 0, count);
                 sentSize += count;
-                receiver.receiveFileProgress((int)(sentSize*100/fileSize));
+                receiver.receiveFileProgress((int)(sentSize * 100 / fileSize));
             }
             fileIn.close();
         } catch (FileNotFoundException e) {
@@ -120,18 +120,18 @@ public class ServerThread extends Thread {
             int count;
             long receivedSize = 0;
 
-            System.out.println("Receiving file from "+senderName+"...");
+            System.out.println("Receiving file from " + senderName + "...");
 
             while (receivedSize < fileSize) {
                 count = fileIn.read(buffer);
                 receivedSize += count;
-                receiver.receiveFileProgress((int)(receivedSize*100/fileSize));
+                receiver.receiveFileProgress((int)(receivedSize * 100 / fileSize));
 
-                //System.out.print("\r"+((int)(receivedSize*100/fileSize))+"%");
+                //System.out.print("\r"+((int)(receivedSize * 100 / fileSize)) + "%");
                 fileOut.write(buffer, 0, count);
             }
             System.out.println();
-            System.out.println("File saved as: "+file.getAbsoluteFile());
+            System.out.println("File saved as: "+ file.getAbsoluteFile());
         } catch (IOException e) {
             e.printStackTrace();
         }

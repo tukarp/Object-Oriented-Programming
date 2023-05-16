@@ -9,6 +9,6 @@ public class SolidFilledPolygon extends Polygon {
 
     @Override
     public String toSvg(String parameters) {
-        return super.toSvg(String.format("fill=\"%s\"",color));
+        return super.toSvg(String.format("fill=\"%s\"", color));
     }
 }

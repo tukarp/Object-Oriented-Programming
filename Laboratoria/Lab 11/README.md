@@ -27,7 +27,7 @@ W okienkowym kliencie stwórz klasę ClientGUIReceiver implementującą ClientRe
 
 ### Zadanie 4
 
-Obsłuż wyświetlanie listy użytkowników. Podczas logowania klient powinien poprosić serwer o wysłanie mu aktualnej listy. Login broadcast i logout broadcast powinny dodawać i usuwać użytkownika z listy.
+Obsłuż wyświetlanie listy użytkowników. Podczas logowania klient powinien poprosić serwer o wysłanie mu aktualnej listy. Login i logout broadcast powinny dodawać i usuwać użytkownika z listy.
 
 ### Zadanie 5
 

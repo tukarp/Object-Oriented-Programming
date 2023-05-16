@@ -16,7 +16,7 @@ public class PersonController {
         try {
             List<Person> result = Person.selectAll();
             model.addAttribute("people", result);
-            model.addAttribute("newPerson",new Person());
+            model.addAttribute("newPerson", new Person());
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }

@@ -14,7 +14,7 @@ public class Main extends Application {
 
         GridPane pane = new GridPane();
 
-        pane.add(gameCanvas,0,0);
+        pane.add(gameCanvas, 0, 0);
         primaryStage.setScene(new Scene(pane));
         primaryStage.setResizable(false);
         gameCanvas.initialize();

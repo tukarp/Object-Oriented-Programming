@@ -10,11 +10,11 @@ public class TemporaryPerson extends Person{
     private List<String> parentNames;
     private List<String> childrenNames;
 
-    public TemporaryPerson(String name, LocalDate birth, LocalDate death, String path, List<String> parentNames,List<String> childrenNames) {
+    public TemporaryPerson(String name, LocalDate birth, LocalDate death, String path, List<String> parentNames, List<String> childrenNames) {
         super(name, birth, death);
         this.path = path;
         this.parentNames = parentNames;
-        this.childrenNames=childrenNames;
+        this.childrenNames = childrenNames;
     }
 
     public String getPath() {
@@ -30,8 +30,8 @@ public class TemporaryPerson extends Person{
 //    public void convert(Map<String, TemporaryPerson> temporaryMap) {
 //        for(String parentName : parentNames) {
 //            Person parent = temporaryMap.get(parentName);
-//            if(parent==null)
-//                throw new UndefinedPersonReferenceException(path,getName());
+//            if(parent == null)
+//                throw new UndefinedPersonReferenceException(path, getName());
 //            this.parents.add(parent);
 //        }
 //    }
@@ -39,8 +39,8 @@ public class TemporaryPerson extends Person{
 //    public void convertChildren(Map<String, TemporaryPerson> temporaryMap) {
 //        for(String childName : childrenNames) {
 //            Person child = temporaryMap.get(childName);
-//            if(child==null)
-//                throw new UndefinedPersonReferenceException(path,getName());
+//            if(child == null)
+//                throw new UndefinedPersonReferenceException(path, getName());
 //            this.children.add(child);
 //        }
 //    }
@@ -49,8 +49,8 @@ public class TemporaryPerson extends Person{
     public void convert(Map<String, TemporaryPerson> temporaryMap) {
         for(String parentName : parentNames) {
             Person parent = temporaryMap.get(parentName);
-            if(parent==null)
-                throw new ParentNotReferencingChildException(path,getName());
+            if(parent == null)
+                throw new ParentNotReferencingChildException(path, getName());
             this.parents.add(parent);
         }
     }
@@ -58,8 +58,8 @@ public class TemporaryPerson extends Person{
     public void convertChildren(Map<String, TemporaryPerson> temporaryMap) {
         for(String childName : childrenNames) {
             Person child = temporaryMap.get(childName);
-            if(child==null)
-                throw new ChildNotReferencingParentException(path,getName());
+            if(child == null)
+                throw new ChildNotReferencingParentException(path, getName());
             this.children.add(child);
         }
     }

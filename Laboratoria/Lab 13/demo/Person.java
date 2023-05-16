@@ -60,7 +60,7 @@ public class Person {
 
     public static List<Person> selectByLastNameStartsWith(String substring) throws SQLException {
         PreparedStatement statement = DatabaseConnection.getConnection().prepareStatement("SELECT * FROM person WHERE last_name LIKE ?;");
-        statement.setString(1, substring+"%");
+        statement.setString(1, substring + "%");
         statement.executeQuery();
         return resultSetToList(statement.getResultSet());
     }

@@ -7,9 +7,9 @@ public class Main {
 
     public static void main(String[] args) {
         //Zadanie 1
-//        DeathCauseStatistic statistic=DeathCauseStatistic.fromCsvLine("A02.1          ,5,-,-,-,-,-,-,-,-,-,-,-,-,1,2,-,1,1,-,-,-");
+//        DeathCauseStatistic statistic=DeathCauseStatistic.fromCsvLine("A02.1, 5, -, -, -, -, -, -, -, -, -, -, -, -, 1, 2, -, 1, 1, -, -, -");
 //        System.out.println(statistic.getKey());
-//        int[] arr=statistic.getAgeBracket();
+//        int[] arr = statistic.getAgeBracket();
 //        for(var a: arr){
 //            System.out.println(a);
 //    }
@@ -17,11 +17,11 @@ public class Main {
 //        System.out.println(statistic.getDeaths(60));
 
         //Zadanie 3a
-        DeathCauseStatisticsList statisticsList=new DeathCauseStatisticsList();
+        DeathCauseStatisticsList statisticsList = new DeathCauseStatisticsList();
         statisticsList.repopulate("zgony.csv");
 //      System.out.println(statisticsList.get(5).getKey());
 
-        List<DeathCauseStatistic> mostDeadly= statisticsList.mostDeadlyDiseases(1,100);
+        List<DeathCauseStatistic> mostDeadly= statisticsList.mostDeadlyDiseases(1, 100);
 //      for(var diseases : mostDeadly)
 //      System.out.println(diseases.getKey());
 

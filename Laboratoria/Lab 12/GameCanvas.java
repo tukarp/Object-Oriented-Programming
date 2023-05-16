@@ -22,7 +22,7 @@ public class GameCanvas extends Canvas {
         private long lastUpdate;
         @Override
         public void handle(long now) {
-            double diff = (now - lastUpdate)/1_000_000_000.;
+            double diff = (now - lastUpdate) / 1_000_000_000.;
             ball.updatePosition(diff);
             draw();
             lastUpdate = now;
@@ -33,7 +33,7 @@ public class GameCanvas extends Canvas {
                 ball.bounceVertically();
             }
             if(shouldBallBounceFromPaddle())
-                ball.bounceFromPaddle((-paddle.getPosition()+(ball.x+ball.width/2))/paddle.width);
+                ball.bounceFromPaddle((-paddle.getPosition() + (ball.x + ball.width / 2)) / paddle.width);
             for(var brick : bricks) {
                 Point2D[] borderPoints = ball.borderPoints();
                 Brick.CrushType crushType = brick.crushes(borderPoints[0], borderPoints[1], borderPoints[2], borderPoints[3]);
@@ -75,7 +75,7 @@ public class GameCanvas extends Canvas {
 
     public void draw(){
         graphicsContext.setFill(Color.BLACK);
-        graphicsContext.fillRect(0,0,getWidth(), getHeight());
+        graphicsContext.fillRect(0, 0, getWidth(), getHeight());
         paddle.draw(graphicsContext);
         ball.draw(graphicsContext);
         bricks.forEach(brick -> brick.draw(graphicsContext));
@@ -92,22 +92,22 @@ public class GameCanvas extends Canvas {
     }
 
     private boolean shouldBallBounceFromPaddle() {
-        return ball.lastY+ ball.height < paddle.y && ball.y+ ball.height >= paddle.y
-                && ball.x >=paddle.x && ball.x <= paddle.x+paddle.width;
+        return ball.lastY + ball.height < paddle.y && ball.y + ball.height >= paddle.y
+                && ball.x >= paddle.x && ball.x <= paddle.x + paddle.width;
     }
 
     private boolean shouldBallBounceVertically() {
         return  (ball.x <= 0 && ball.lastX > 0)
-                || (ball.x+ball.width >= getWidth() - 1 && ball.lastX+ball.width < getWidth() - 1);
+                || (ball.x + ball.width >= getWidth() - 1 && ball.lastX + ball.width < getWidth() - 1);
     }
 
     public void loadLevel(){
         bricks = new ArrayList<>();
         Color colors[] = new Color[]{Color.RED, Color.BEIGE, Color.BROWN, Color.GREENYELLOW, Color.BLUE};
         Brick.setGridRows(20,10);
-        for(int i=0;i<5;i++){
-            for(int j=0;j<Brick.getGridColumns();j++)
-                bricks.add(new Brick(j,i+2,colors[i]));
+        for(int i = 0; i < 5; i++){
+            for(int j = 0; j < Brick.getGridColumns(); j++)
+                bricks.add(new Brick(j, i + 2, colors[i]));
         }
     }
 }

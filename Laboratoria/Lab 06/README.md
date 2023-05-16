@@ -35,10 +35,10 @@ Utwórz obiekt klasy FileCommanderCLI przekazując mu jako parametry standardowe
 
 ### Zadanie 5
 
-Zmodyfikuj wywołanie funkcjonalności ls tak, aby można było go wywołać z opcją --color. Katalogi powinny wówczas nie być otoczone nawiasami ale mieć kolor niebieski. W tym celu zmodyfikuj metodę FileCommander::ls, aby przyjmowała obiekt funkcyjny Function<String, String>. Napisz dwie metody, które będzie można przekazać takim parametrem: jedną dodającą nawiasy, a drugą zmieniającą kolor. Skorzystaj z  dołączonej klasy ConsoleColors.
+Zmodyfikuj wywołanie funkcjonalności "ls" tak, aby można było go wywołać z opcją "--color". Katalogi powinny wówczas nie być otoczone nawiasami ale mieć kolor niebieski. W tym celu zmodyfikuj metodę FileCommander::ls, aby przyjmowała obiekt funkcyjny Function<String, String>. Napisz dwie metody, które będzie można przekazać takim parametrem: jedną dodającą nawiasy, a drugą zmieniającą kolor. Skorzystaj z  dołączonej klasy ConsoleColors.
 
 ### Zadanie 6
 
-Zmodyfikuj wywołanie funkcjonalności ls tak, aby można było go wywołać z opcją --filter=, gdzie po znaku równości może pojawić się dowolny ciąg znaków. Metoda FileCommander::ls powinna przyjmować ten napis jako parametr i zwracać wyłącznie pliki i katalogi zawierające ten napis.
+Zmodyfikuj wywołanie funkcjonalności "ls" tak, aby można było go wywołać z opcją "--filter=", gdzie po znaku równości może pojawić się dowolny ciąg znaków. Metoda FileCommander::ls powinna przyjmować ten napis jako parametr i zwracać wyłącznie pliki i katalogi zawierające ten napis.
 
 Jeżeli opcje filter i color zostaną użyte jednocześnie, podciąg z filtra powinien być w nazwach plików i katalogów wyróżniony kolorem czerwonym.

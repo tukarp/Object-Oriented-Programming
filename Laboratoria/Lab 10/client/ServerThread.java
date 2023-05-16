@@ -63,7 +63,7 @@ public class ServerThread extends Thread {
 
         try {
             long fileSize = file.length();
-            writer.println("FI"+recipientName+" "+fileSize+" "+file.getName());
+            writer.println("FI" + recipientName + " " + fileSize + " " + file.getName());
             FileInputStream fileIn = new FileInputStream(file);
             DataOutputStream fileOut = new DataOutputStream(socket.getOutputStream());
             byte[] buffer = new byte[64];
@@ -94,17 +94,17 @@ public class ServerThread extends Thread {
             int count;
             long receivedSize = 0;
 
-            System.out.println("Receiving file from "+senderName+"...");
+            System.out.println("Receiving file from " + senderName + "...");
 
             while (receivedSize < fileSize) {
                 count = fileIn.read(buffer);
                 receivedSize += count;
-                System.out.print("\r"+(receivedSize*100/fileSize)+"%");
+                System.out.print("\r" + (receivedSize * 100 / fileSize) + "%");
                 fileOut.write(buffer, 0, count);
             }
 
             System.out.println();
-            System.out.println("File saved as: "+file.getAbsoluteFile());
+            System.out.println("File saved as: " + file.getAbsoluteFile());
         } catch (IOException e) {
             e.printStackTrace();
         }

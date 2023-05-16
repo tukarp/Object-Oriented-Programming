@@ -30,7 +30,7 @@ public class Controller {
         this.serverThread.setDraw(dp -> {
             GraphicsContext context = canvas.getGraphicsContext2D();
             context.setFill(Color.web(dp.color()));
-            context.fillOval(dp.x()-dp.radius(), dp.y()-dp.radius(), dp.radius()*2, dp.radius()*2);
+            context.fillOval(dp.x() - dp.radius(), dp.y() - dp.radius(), dp.radius() * 2, dp.radius() * 2);
         });
     }
 
@@ -53,16 +53,16 @@ public class Controller {
 
     private static String colorToHexString(Color color) {
         return String.format("#%02X%02X%02X",
-                (int)(color.getRed()*255),
-                (int)(color.getGreen()*255),
-                (int)(color.getBlue()*255));
+                (int)(color.getRed() * 255),
+                (int)(color.getGreen() * 255),
+                (int)(color.getBlue() * 255));
     }
     @FXML
     private void onMouseClicked(MouseEvent event) {
         double radius = radiusSlider.getValue();
         Color color = colorPicker.getValue();
 
-        serverThread.send((int)event.getX(), (int)event.getY(), colorToHexString(color), (int)radius);
+        serverThread.send((int) event.getX(), (int) event.getY(), colorToHexString(color), (int) radius);
         //drawCircle((int)event.getX(), (int)event.getY(), radius, color);
     }
 
@@ -70,6 +70,6 @@ public class Controller {
 //        GraphicsContext context = canvas.getGraphicsContext2D();
 //
 //        context.setFill(Color.web(dp.color()));
-//        context.fillOval(x-radius, y-radius, radius*2, radius*2);
+//        context.fillOval(x - radius, y - radius, radius * 2, radius * 2);
 //    }
 }

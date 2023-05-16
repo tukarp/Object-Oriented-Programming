@@ -57,7 +57,7 @@ public class MainContainer {
     private void onSendFileButtonClick() {
         FileChooser fileChooser = new FileChooser();
         File file = fileChooser.showOpenDialog(mainPane.getScene().getWindow());
-        if (file != null) {
+        if(file != null) {
             serverThread.sendFile(clientList.getSelectionModel().getSelectedItem().toString(), file.getAbsolutePath());
         }
     }
@@ -69,7 +69,7 @@ public class MainContainer {
     }
 
     public void showBroadcast(String sender, String message) {
-        outputArea.appendText("\n"+sender+": "+message);
+        outputArea.appendText("\n" + sender + ": " + message);
         outputArea.setScrollTop(Double.MAX_VALUE);
     }
 
@@ -82,6 +82,6 @@ public class MainContainer {
     }
 
     public void setFileProgress(int progress) {
-        fileProgressBar.setProgress(progress/100.);
+        fileProgressBar.setProgress(progress / 100.);
     }
 }

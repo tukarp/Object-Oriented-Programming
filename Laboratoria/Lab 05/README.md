@@ -9,7 +9,7 @@ Utwórz interfejs PersonPersistenceManager implementujący metody load oraz save
 - DirectoryPersonPersistenceManager: load = Person.fromDirectory, save = Person.toDirectory,
 - CsvPersonPersistenceManager: load = Person.fromCsv, save = Person.toCsv.
 
-Z wyjątkiem klasy Main, umieść wszystkie utworzone klasy w pakiecie person i zmodyfikuj potrzebne pola i metody z dostępem private na package tak, aby klasy Manager miały do nich dostęp.
+Z wyjątkiem klasy Main, umieść wszystkie utworzone klasy w pakiecie “person” i zmodyfikuj potrzebne pola i metody z dostępem private na package tak, aby klasy *Manager miały do nich dostęp.
 
 W czasie zajęć rozwijana będzie jedynie klasa DirectoryPersonPersistenceManager. Klasę CsvPersonPersistenceManager można zmodyfikować samodzielnie, aby uwzględniała zmiany wprowadzane w plikach.
 
@@ -19,7 +19,7 @@ Rozważ sytuację, w której w dwóch plikach znajdują się osoby o tym samym i
 
 ### Zadanie 3
 
-Zmodyfikuj pliki tekstowe, aby pod dotychczasowymi liniami warunkowo znalazł się napis Rodzice:, a po nim w następnych liniach od 1 do 2 napisów definiujących inne osoby znajdujące się we wczytywanych plikach. Plik może być także pozbawiony informacji o rodzicach. Wówczas napis “Rodzice:” nie pojawia się.
+Zmodyfikuj pliki tekstowe, aby pod dotychczasowymi liniami warunkowo znalazł się napis “Rodzice:”, a po nim w następnych liniach od 1 do 2 napisów definiujących inne osoby znajdujące się we wczytywanych plikach. Plik może być także pozbawiony informacji o rodzicach. Wówczas napis “Rodzice:” nie pojawia się.
 
 Do klasy Person dodaj pole parents będące listą obiektów klasy Person. Pole to należy ustawić podczas tworzenia obiektów metodą PersonPersistenceManager::load.
 
@@ -33,7 +33,7 @@ Niech klasa Person implementuje interfejs Serializable. Zdefiniuj klasę BinaryP
 
 ### Zadanie 6
 
-Zmodyfikuj pliki tekstowe, aby pod dotychczasowymi liniami warunkowo znalazł się napis Dzieci:, a po nim dowolna liczba linii napisów definiujących inne osoby znajdujące się we wczytywanych plikach. Do klasy Person dodaj pole children będące listą obiektów Person. Jeżeli osoba nie posiada dzieci, napis Dzieci: należy pominąć. Pole to należy ustawić podczas tworzenia obiektów metodą PersonPersistenceManager::load.
+Zmodyfikuj pliki tekstowe, aby pod dotychczasowymi liniami warunkowo znalazł się napis “Dzieci:”, a po nim dowolna liczba linii napisów definiujących inne osoby znajdujące się we wczytywanych plikach. Do klasy Person dodaj pole children będące listą obiektów Person. Jeżeli osoba nie posiada dzieci, napis “Dzieci:” należy pominąć. Pole to należy ustawić podczas tworzenia obiektów metodą PersonPersistenceManager::load.
 
 ### Zadanie 7
 

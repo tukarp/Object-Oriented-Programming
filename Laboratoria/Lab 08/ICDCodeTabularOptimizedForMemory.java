@@ -28,7 +28,7 @@ public class ICDCodeTabularOptimizedForMemory implements ICDCodeTabular{
                     .map(lineArr -> lineArr[1]);
             if(foundEntry.isPresent())
                 return foundEntry.get();
-            else throw new IndexOutOfBoundsException("No such code: "+code);
+            else throw new IndexOutOfBoundsException("No such code: " + code);
         } catch (IOException e) {
             e.printStackTrace();
             return "";

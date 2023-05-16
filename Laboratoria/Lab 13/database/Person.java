@@ -43,7 +43,7 @@ public class Person {
     public static List<Person> selectByLastNameStartsWith(String substring) throws SQLException {
         PreparedStatement statement = DatabaseConnection.getConnection()
                 .prepareStatement("SELECT * FROM person WHERE last_name LIKE ?;");
-        statement.setString(1, substring+"%");
+        statement.setString(1, substring + "%");
         statement.executeQuery();
         return resultSetToList(statement.getResultSet());
     }
@@ -60,7 +60,7 @@ public class Person {
         return result;
     }
 
-    public static void insertPerson(String firstName,String lastName) throws SQLException {
+    public static void insertPerson(String firstName, String lastName) throws SQLException {
         PreparedStatement statement = DatabaseConnection.getConnection()
                 .prepareStatement("INSERT INTO person(first_name, last_name) VALUES (?, ?);");
         statement.setString(1, firstName);
@@ -68,8 +68,7 @@ public class Person {
         statement.executeUpdate();
     }
 
-    public static int insertPersonReturningId(String firstName,String lastName) throws SQLException {
-
+    public static int insertPersonReturningId(String firstName, String lastName) throws SQLException {
         PreparedStatement statement = DatabaseConnection.getConnection()
                 .prepareStatement("INSERT INTO person(first_name, last_name) VALUES (?, ?);");
         statement.setString(1, firstName);

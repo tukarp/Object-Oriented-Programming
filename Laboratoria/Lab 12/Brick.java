@@ -11,10 +11,10 @@ public class Brick extends GraphicsItem{
 
     public Brick(int gridX, int gridY, Color color) {
         this.color = color;
-        width = canvasWidth/gridColumns;
-        height = canvasHeight/gridRows;
-        x=gridX * width;
-        y=gridY * height;
+        width = canvasWidth / gridColumns;
+        height = canvasHeight / gridRows;
+        x = gridX * width;
+        y = gridY * height;
     }
     public enum CrushType {NoCrush, HorizontalCrush, VerticalCrush};
 
@@ -34,13 +34,13 @@ public class Brick extends GraphicsItem{
     @Override
     public void draw(GraphicsContext graphicsContext) {
         graphicsContext.setFill(color);
-        graphicsContext.fillRect(x,y,width,height);
+        graphicsContext.fillRect(x, y, width, height);
         graphicsContext.setStroke(color.brighter());
-        graphicsContext.strokeLine(x,y, x+width, y);
-        graphicsContext.strokeLine(x,y, x, y+height);
+        graphicsContext.strokeLine(x, y, x + width, y);
+        graphicsContext.strokeLine(x, y, x, y + height);
         graphicsContext.setStroke(color.darker());
-        graphicsContext.strokeLine(x,y+height, x+width, y+height);
-        graphicsContext.strokeLine(x+width,y, x+width, y+height);
+        graphicsContext.strokeLine(x, y + height, x + width, y + height);
+        graphicsContext.strokeLine(x + width, y, x + width, y + height);
     }
 
     CrushType crushes(Point2D left, Point2D right, Point2D top, Point2D bottom) {
@@ -50,6 +50,6 @@ public class Brick extends GraphicsItem{
     }
 
     boolean contains(Point2D point) {
-        return x <= point.getX() && point.getX() <= x+width && y <= point.getY() && point.getY() <= y+height;
+        return x <= point.getX() && point.getX() <= x + width && y <= point.getY() && point.getY() <= y + height;
     }
 }

@@ -21,7 +21,7 @@ public class SvgScene {
         try {
             FileWriter file = new FileWriter(path);
             file.write("<html>\n<body>\n");
-            file.write(String.format("<svg width=\"%d\" height=\"%d\">",width, height));
+            file.write(String.format("<svg width=\"%d\" height=\"%d\">", width, height));
             for(Shape shape : shapes)
                 file.write("\t"+ shape.toSvg());
             file.write("</svg>\n</body>\n</html>\n");
@@ -31,4 +31,3 @@ public class SvgScene {
         }
     }
 }
-

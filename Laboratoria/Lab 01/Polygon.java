@@ -24,4 +24,3 @@ public class Polygon {
         return String.format(Locale.ENGLISH,"<polygon points=\"%s\" />", pointsString);
     }
 }
-

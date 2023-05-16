@@ -6,8 +6,8 @@ public class ParentingAgeException extends RuntimeException {
     private String pathParent;
     private String pathChild;
     public ParentingAgeException(String pathParent, String pathChild){
-        this.pathParent=pathParent;
-        this.pathChild=pathChild;
+        this.pathParent = pathParent;
+        this.pathChild = pathChild;
     }
 
     @Override

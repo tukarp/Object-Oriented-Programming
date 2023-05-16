@@ -36,8 +36,8 @@ public class CsvPersonPersistenceManager implements PersonPersistenceManager{
             BufferedWriter writer = new BufferedWriter(new FileWriter(path));
             for(Person person : people) {
                 writer.write(person.getName());
-                writer.write(';'+Person.parseDate(person.getBirth()));
-                writer.write(";"+(person.getDeath() == null? "" : Person.parseDate(person.getDeath())));
+                writer.write(";" + Person.parseDate(person.getBirth()));
+                writer.write(";" + (person.getDeath() == null? "" : Person.parseDate(person.getDeath())));
                 writer.newLine();
             }
             writer.close();

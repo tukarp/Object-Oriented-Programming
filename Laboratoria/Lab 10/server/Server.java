@@ -42,19 +42,19 @@ public class Server {
     public void broadcast(ClientThread sender, String message){
         for(var currentClient : clients)
             if(currentClient != sender)
-                currentClient.send(sender.getClientName()+": "+message);
+                currentClient.send(sender.getClientName() + ": " + message);
 
     }
 
     public void broadcastLogin(ClientThread client) {
         for(var currentClient : clients)
             if(currentClient != client)
-                currentClient.send(client.getClientName()+ " joined the chat");
+                currentClient.send(client.getClientName() + " joined the chat");
     }
 
     public void broadcastLogout(ClientThread client) {
         for(var currentClient : clients)
-            currentClient.send(client.getClientName()+ " left the chat");
+            currentClient.send(client.getClientName() + " left the chat");
     }
 
     private Optional<ClientThread> getClient(String clientName) {
@@ -69,8 +69,8 @@ public class Server {
 
         Optional<ClientThread> recipient = getClient(recipientName);
         if(recipient.isPresent()) {
-            recipient.get().send(sender.getClientName()+" whispers: "+messageArr[1]);
-        } else sender.send("No such user: "+recipientName);
+            recipient.get().send(sender.getClientName() + " whispers: " + messageArr[1]);
+        } else sender.send("No such user: " + recipientName);
     }
 
     public void online(ClientThread sender) {
@@ -96,15 +96,13 @@ public class Server {
             long receivedSize = 0;
             int count;
 
-            recipient.get().send("FI"+sender.getClientName()+" "+fileSize+" "+fileName);
-            while (receivedSize < fileSize) {
+            recipient.get().send("FI" + sender.getClientName() + " " + fileSize + " " + fileName);
+            while(receivedSize < fileSize) {
                 count = fileIn.read(buffer);
                 receivedSize += count;
-                System.out.println(receivedSize+" "+(fileSize-receivedSize));
+                System.out.println(receivedSize + " " + (fileSize - receivedSize));
                 fileOut.write(buffer, 0, count);
             }
-        }
-
-        else sender.send("No such user: "+recipientName);
+        } else sender.send("No such user: " + recipientName);
     }
 }

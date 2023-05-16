@@ -18,7 +18,6 @@ Zapełnij tę tabelę przykładowymi danymi.
 
 Napisz klasę DatabaseConnection posiadającą prywatne, statyczne pole typu java.sql.Connection. Napisz publiczny, statyczny akcesor do tego pola oraz publiczne, statyczne metody connect() i disconnect() nawiązujące i zrywające połączenie z bazą danych.
 
-
 ### Zadanie 2
 
 Napisz klasę Person posiadającą pola analogiczne do kolumn tabeli. Napisz konstruktor ustawiający te pola oraz funkcje toString(). Napisz publiczną, statyczną metodę, która odczyta z bazy i zwróci w postaci listy obiektów Person całą zawartość tabeli.

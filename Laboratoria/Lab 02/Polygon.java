@@ -38,8 +38,8 @@ public class Polygon extends Shape{
     }
 
     public static Polygon square(Line diagonal, Style style) {
-        Point center = new Point((diagonal.getP1().x+diagonal.getP2().x)/2, (diagonal.getP1().y+diagonal.getP2().y)/2);
-        Line perpResult[] = Line.perpendicular(diagonal,center, diagonal.distance()/2);
+        Point center = new Point((diagonal.getP1().x + diagonal.getP2().x) / 2, (diagonal.getP1().y + diagonal.getP2().y) / 2);
+        Line perpResult[] = Line.perpendicular(diagonal, center, diagonal.distance() / 2);
         Point pointArr[]= new Point[4];
         pointArr[0] = diagonal.getP1();
         pointArr[1] = perpResult[0].getP2();
@@ -50,4 +50,3 @@ public class Polygon extends Shape{
         return result;
     }
 }
-

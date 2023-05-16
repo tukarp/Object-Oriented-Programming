@@ -51,6 +51,6 @@ public abstract class Product {
     public static int priceIndex(int year, int month) {
         if(year < 2010 || month < 1 || month > 12) throw new IndexOutOfBoundsException();
         if(year > 2022 && month > 3) throw new IndexOutOfBoundsException();
-        return (year-2010) * 12 + (month-1);
+        return (year - 2010) * 12 + (month - 1);
     }
 }

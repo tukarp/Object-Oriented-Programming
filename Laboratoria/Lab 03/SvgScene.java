@@ -25,13 +25,13 @@ public class SvgScene {
         try {
             FileWriter file = new FileWriter(path);
             file.write("<html>\n<body>\n");
-            file.write(String.format("<svg width=\"%d\" height=\"%d\">\n",1000, 1000));
+            file.write(String.format("<svg width=\"%d\" height=\"%d\">\n", 1000, 1000));
 
             for(Shape shape : shapes)
-                file.write("\t"+ shape.toSvg("") +"\n" );
+                file.write("\t"+ shape.toSvg("") +"\n");
             if(defs.length>=0) {
                 file.write("<defs>\n");
-                for (var def : defs)
+                for(var def : defs)
                     file.write(def + "\n");
                 file.write("</defs>\n");
             }

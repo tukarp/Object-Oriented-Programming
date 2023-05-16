@@ -23,7 +23,7 @@ public class NonFoodProduct extends Product {
 
             scanner.nextLine();
             prices = Arrays.stream(scanner.nextLine().split(";"))
-                    .map(value -> value.replace(",","."))
+                    .map(value -> value.replace(",", "."))
                     .map(Double::valueOf)
                     .toArray(Double[]::new);
 

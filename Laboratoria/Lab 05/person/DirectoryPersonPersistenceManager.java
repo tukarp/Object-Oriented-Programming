@@ -14,7 +14,7 @@ public class DirectoryPersonPersistenceManager implements PersonPersistenceManag
 //    public Person[] load(String path) {
 //        File[] files = new File(path).listFiles();
 //        Person[] result = new Person[files.length];
-//        for(int i=0; i<files.length; i++) {
+//        for(int i = 0; i < files.length; i++) {
 //            result[i] = Person.fromFile(files[i].getPath());
 //        }
 //        return result;
@@ -37,17 +37,17 @@ public class DirectoryPersonPersistenceManager implements PersonPersistenceManag
             }
         }
         for(Person person : people) {
-            toFile(path+"/"+person.getName()+".txt", person);
+            toFile(path + "/" + person.getName() + ".txt", person);
         }
     }
 
     public static void toFile(String path, Person person) {
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(path));
-            writer.write(person.getName()+"\n");
-            writer.write(Person.parseDate(person.getBirth())+"\n");
+            writer.write(person.getName() + "\n");
+            writer.write(Person.parseDate(person.getBirth()) + "\n");
             if(person.getDeath() != null) {
-                writer.write(Person.parseDate(person.getDeath())+"\n");
+                writer.write(Person.parseDate(person.getDeath()) + "\n");
             }
             writer.close();
         } catch (IOException | NullPointerException | DateTimeParseException e) {
@@ -61,7 +61,7 @@ public class DirectoryPersonPersistenceManager implements PersonPersistenceManag
 //        Map<String, TemporaryPerson> temporaryMap = new HashMap<>();
 //
 //        File[] files = new File(path).listFiles();
-//        for(int i=0; i<files.length; i++) {
+//        for(int i = 0; i < files.length; i++) {
 //            TemporaryPerson person = fromFile(files[i].getPath());
 //            if(temporaryMap.containsKey(person.getName()))
 //                throw new AmbigiousPersonException(person.getPath(), temporaryMap.get(person.getName()).getPath());
@@ -126,7 +126,7 @@ public class DirectoryPersonPersistenceManager implements PersonPersistenceManag
 //        Map<String, TemporaryPerson> temporaryMap = new HashMap<>();
 //
 //        File[] files = new File(path).listFiles();
-//        for(int i=0; i<files.length; i++) {
+//        for(int i = 0; i < files.length; i++) {
 //            TemporaryPerson person = fromFile(files[i].getPath());
 //            if(temporaryMap.containsKey(person.getName()))
 //                throw new AmbigiousPersonException(person.getPath(), temporaryMap.get(person.getName()).getPath());
@@ -146,7 +146,7 @@ public class DirectoryPersonPersistenceManager implements PersonPersistenceManag
         Map<String, TemporaryPerson> temporaryMap = new HashMap<>();
 
         File[] files = new File(path).listFiles();
-        for(int i=0; i<files.length; i++) {
+        for(int i = 0; i < files.length; i++) {
             TemporaryPerson person = fromFile(files[i].getPath());
             if(temporaryMap.containsKey(person.getName()))
                 throw new AmbigiousPersonException(person.getPath(), temporaryMap.get(person.getName()).getPath());
@@ -215,6 +215,6 @@ public class DirectoryPersonPersistenceManager implements PersonPersistenceManag
         } catch (NullPointerException | FileNotFoundException e) {
             //e.printStackTrace();
         }
-        return new TemporaryPerson(name, birth, death, path, parentNames,childrenNames);
+        return new TemporaryPerson(name, birth, death, path, parentNames, childrenNames);
     }
 }

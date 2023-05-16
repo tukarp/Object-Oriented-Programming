@@ -11,10 +11,10 @@ public record Dot(int x, int y, String color, int radius) {
     }
 
     public static String toMessage(int x, int y, String color, int radius) {
-        return x+";"+y+";"+color+";"+radius;
+        return x + ";" + y + ";" + color + ";" + radius;
     }
 
     public String toMessage() {
-        return x+";"+y+";"+color+";"+radius;
+        return x + ";" + y + ";" + color + ";" + radius;
     }
 }

@@ -5,7 +5,7 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
 public class Ball extends GraphicsItem{
-    private Point2D moveVector = new Point2D(1,-1).normalize();
+    private Point2D moveVector = new Point2D(1, -1).normalize();
     private double velocity = 300;
     double lastX, lastY;
 
@@ -20,8 +20,8 @@ public class Ball extends GraphicsItem{
     }
 
     void setPosition(Point2D point){
-        this.x= point.getX() - width/2;
-        this.y= point.getY() - width/2-5;
+        this.x = point.getX() - width / 2;
+        this.y = point.getY() - width / 2 - 5;
     }
 
     public void updatePosition(double difference) {
@@ -32,24 +32,24 @@ public class Ball extends GraphicsItem{
     }
 
     public void bounceVertically() {
-        moveVector = new Point2D(-moveVector.getX(),moveVector.getY()).normalize();
+        moveVector = new Point2D(-moveVector.getX() ,moveVector.getY()).normalize();
 
     }
 
     public void bounceHorizontally() {
-        moveVector = new Point2D(moveVector.getX(),-moveVector.getY()).normalize();
+        moveVector = new Point2D(moveVector.getX(), -moveVector.getY()).normalize();
     }
 
     public Point2D[] borderPoints() {
         Point2D[] result = new Point2D[4];
-        result[0] = new Point2D(x, y+height/2);
-        result[1] = new Point2D(x+width, y+height/2);
-        result[2] = new Point2D(x+width/2, y);
-        result[3] = new Point2D(x+width/2, y+height);
+        result[0] = new Point2D(x, y + height / 2);
+        result[1] = new Point2D(x + width, y + height / 2);
+        result[2] = new Point2D(x + width / 2, y);
+        result[3] = new Point2D(x + width / 2, y + height);
         return result;
     }
 
     public void bounceFromPaddle(double pos) {
-        moveVector = new Point2D(pos*5, -moveVector.getY()).normalize();
+        moveVector = new Point2D(pos * 5, -moveVector.getY()).normalize();
     }
 }

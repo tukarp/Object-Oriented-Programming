@@ -13,15 +13,15 @@ public class Style {
     public String toSvg() {
         String styleString = "";
         if(fillColor != null)
-            styleString += "fill:"+fillColor+";";
+            styleString += "fill:" + fillColor + ";";
         else
             styleString += "fill:transparent;";
         if(strokeColor != null)
-            styleString += "stroke:"+strokeColor+";";
+            styleString += "stroke:" + strokeColor + ";";
         else
             styleString += "stroke:black;";
         if(strokeWidth != null)
-            styleString += "stroke-width:"+strokeWidth+";";
+            styleString += "stroke-width:" + strokeWidth + ";";
         return styleString;
     }
 }

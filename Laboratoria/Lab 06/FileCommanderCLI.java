@@ -20,11 +20,11 @@ public class FileCommanderCLI {
 
     public void eventLoop(){
         while(true){
-            try{
+            try {
                 String line = reader.readLine();
                 runCommand(line);
                 writer.flush();
-            }catch(IOException e){
+            } catch(IOException e){
                 e.printStackTrace();
             }
         }
@@ -36,7 +36,7 @@ public class FileCommanderCLI {
         switch (commandArr[0]) {
             case "pwd" -> writer.write(fileCommander.pwd() + "\n");
             case "cd" -> fileCommander.cd(commandArr[1]);
-            case "ls" -> writer.write(runLs(Arrays.copyOfRange(commandArr,1, commandArr.length)) + "\n");//writer.write(fileCommander.ls(FileCommander::formatColor).toString()+ "\n");
+            case "ls" -> writer.write(runLs(Arrays.copyOfRange(commandArr,1, commandArr.length)) + "\n");
             case "find" -> writer.write(fileCommander.find(commandArr[1]).toString()+ "\n");
             default -> writer.write("Unknown command\n");
         }

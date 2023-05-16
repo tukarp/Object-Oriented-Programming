@@ -120,7 +120,7 @@ public class CustomList<T> extends AbstractList<T> {
             throw new NoSuchElementException();
         else {
             Node currentNode = head;
-            for(int i=0; i<index; i++)
+            for(int i = 0; i < index; i++)
                 currentNode = currentNode.next;
             return currentNode.value;
         }

@@ -20,7 +20,7 @@ public class ClientThread extends Thread {
             BufferedReader reader = new BufferedReader(new InputStreamReader(input));
             writer = new PrintWriter(output, true);
             String message;
-            while ((message = reader.readLine()) != null) {
+            while((message = reader.readLine()) != null) {
                 server.broadcast(message);
             }
             } catch (IOException e) {

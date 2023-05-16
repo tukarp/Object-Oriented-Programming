@@ -58,7 +58,7 @@ public class Person {
         try {
             BufferedReader reader = new BufferedReader(new FileReader(path));
             while(null != (line = reader.readLine())) {
-                StringTokenizer tokenizer = new StringTokenizer(line,";");
+                StringTokenizer tokenizer = new StringTokenizer(line, ";");
                 String name = tokenizer.nextToken();
                 LocalDate birth = parseDate(tokenizer.nextToken());
                 LocalDate death = null;
@@ -78,10 +78,10 @@ public class Person {
     public static void toFile(String path, Person person) {
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(path));
-            writer.write(person.name+"\n");
-            writer.write(parseDate(person.birth)+"\n");
+            writer.write(person.name + "\n");
+            writer.write(parseDate(person.birth) + "\n");
             if(person.death != null) {
-                writer.write(parseDate(person.death)+"\n");
+                writer.write(parseDate(person.death) + "\n");
             }
             writer.close();
         } catch (IOException | NullPointerException | DateTimeParseException e) {

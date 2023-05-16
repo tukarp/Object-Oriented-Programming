@@ -35,9 +35,9 @@ public class FileCommander {
         String endMarker = text.startsWith(ConsoleColors.BLUE) ? ConsoleColors.BLUE : ConsoleColors.RESET;
 
         result += text.substring(0, begin);
-        result+=ConsoleColors.RED_BOLD;
+        result += ConsoleColors.RED_BOLD;
         result += text.substring(begin, end);
-        result+=endMarker;
+        result += endMarker;
         result += text.substring(end);
 
         return result;

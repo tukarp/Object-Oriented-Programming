@@ -23,7 +23,7 @@ public class ClientThread extends Thread {
             BufferedReader reader = new BufferedReader(new InputStreamReader(input));
             writer = new PrintWriter(output, true);
             String message;
-            while ((message = reader.readLine()) != null){
+            while((message = reader.readLine()) != null){
                 String prefix = message.substring(0,2);
                 String postfix = message.substring(2);
                 switch(prefix) {
@@ -55,7 +55,7 @@ public class ClientThread extends Thread {
 
     public void login(String name) {
         clientName = name;
-        send("Welcome, "+name);
+        send("Welcome, " + name);
         server.broadcastLogin(this);
     }
 }

@@ -41,5 +41,5 @@ Napisz publiczne, statyczne metody klasy Person:
 
 Zdefiniuj klasę User, dziedziczącą po Person, z polami login i password. Napisz publiczne statyczne metody klasy User:
 
-- toEncryptedFile - przyjmującą tablicę obiektów User i ścieżkę do pliku. Metoda powinna umieścić w pliku dane z tablicy w postaci binarnej, ale zaszyfrowane dowolną metodą, w których kluczem będzie password,
+- toEncryptedFile - przyjmującą tablicę obiektów User i ścieżkę do pliku. Metoda powinna umieścić w pliku dane z tablicy w postaci binarnej, ale zaszyfrowane dowolną metodą, w których kluczem będzie "password",
 - fromEncryptedFile - przyjmującą ścieżkę do pliku binarnego, zwracającą tablicę obiektów User. Metoda powinna odczytać plik stworzony przez metodę toEncryptedFile.

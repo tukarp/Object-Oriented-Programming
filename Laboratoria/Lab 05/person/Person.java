@@ -39,11 +39,11 @@ public class Person implements Serializable{
                 ", death=" + death +
                 ", parents={";
         for(var parent : parents )
-            str +=parent.name + ", ";
-        str+="} children={";
+            str += parent.name + ", ";
+        str += "} children={";
         for(var child : children )
-            str +=child.name + ", ";
-        str+="}}";
+            str += child.name + ", ";
+        str+ = "}}";
 
         return str;
     }

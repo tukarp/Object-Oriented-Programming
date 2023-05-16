@@ -32,11 +32,11 @@ public class DeathCauseStatistic {
         String key;
         int ageBracket[] = new int[20];
 
-        StringTokenizer tokenizer = new StringTokenizer(line,",");
+        StringTokenizer tokenizer = new StringTokenizer(line, ",");
         key = tokenizer.nextToken();
-        key=key.trim();
+        key = key.trim();
         tokenizer.nextToken();
-        for(int i=0; i<20; i++) {
+        for(int i = 0; i < 20; i++) {
             String token = tokenizer.nextToken();
             ageBracket[i] = token.equals("-") ? 0 : Integer.parseInt(token);
         }
@@ -51,6 +51,6 @@ public class DeathCauseStatistic {
     }
 
     public AgeBracketDeaths getDeaths(int age) {
-        return new AgeBracketDeaths(age/5*5,age/5*5+4, ageBracket[age/5]);
+        return new AgeBracketDeaths(age / 5 * 5, age / 5 * 5 + 4, ageBracket[age / 5]);
     }
 }

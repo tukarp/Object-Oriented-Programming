@@ -12,6 +12,6 @@ public class RangePredicate <T extends Comparable> implements Predicate<T> {
 
     @Override
     public boolean test(T t) {
-        return t.compareTo(begin)>0 && t.compareTo(end)<0;
+        return t.compareTo(begin) > 0 && t.compareTo(end) < 0;
     }
 }

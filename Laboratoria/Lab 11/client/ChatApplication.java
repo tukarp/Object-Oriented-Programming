@@ -39,7 +39,6 @@ public class ChatApplication extends Application {
         String login = null;
         if (result.isPresent())  {
             login = result.get();
-
             serverThread.login(login);
 
             stage.setTitle("Chat - " + login);
