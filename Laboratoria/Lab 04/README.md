@@ -1,6 +1,6 @@
-# Laboratorium 04
+# Programowanie Obiektowe
 
-## Pliki, napisy, serializacja
+## Laboratorium 04 - Pliki, napisy, serializacja
 
 ### Zadanie 1
 

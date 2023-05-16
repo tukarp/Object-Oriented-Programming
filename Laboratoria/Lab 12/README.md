@@ -1,6 +1,6 @@
-# Laboratorium 12
+# Programowanie Obiektowe
 
-## Gra
+## Laboratorium 12 - Gra
 
 ### Zadanie 1
 

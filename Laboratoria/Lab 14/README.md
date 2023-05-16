@@ -1,6 +1,6 @@
-# Laboratorium 14
+# Programowanie Obiektowe
 
-## Powtórzenie 2
+## Laboratorium 14 - Powtórzenie 2
 
 ### Zadanie 1
 

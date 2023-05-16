@@ -1,6 +1,6 @@
-# Laboratorium 13
+# Programowanie Obiektowe
 
-## Bazy danych
+## Laboratorium 13 - Bazy danych
 
 Utwórz bazę SQLite składającą się z pojedynczej tabeli:
 

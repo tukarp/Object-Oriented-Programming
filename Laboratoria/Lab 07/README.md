@@ -1,6 +1,6 @@
-# Laboratorium 7
+# Programowanie Obiektowe
 
-## Programowanie generyczne
+## Laboratorium 07 - Programowanie generyczne
 
 ### Zadania 1
 

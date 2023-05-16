@@ -1,6 +1,6 @@
-# Laboratorium 9 
+# Programowanie Obiektowe
 
-## Testy
+## Laboratorium 09 - Testy
 
 ### Zadanie 1a
 

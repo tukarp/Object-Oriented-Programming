@@ -1,6 +1,6 @@
-# Laboratorium 10
+# Programowanie Obiektowe
 
-## Aplikacje sieciowe
+## Laboratorium 10 - Aplikacje sieciowe
 
 ### Zadanie 1
 

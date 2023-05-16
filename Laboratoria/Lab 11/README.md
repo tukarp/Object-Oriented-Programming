@@ -1,6 +1,6 @@
-# Laboratorium 11
+# Programowanie Obiektowe 
 
-## Graficzny interfejs użytkownika
+## Laboratorium 11 - Graficzny interfejs użytkownika
 
 ### Zadanie 1
 

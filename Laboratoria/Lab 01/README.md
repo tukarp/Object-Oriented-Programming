@@ -1,6 +1,6 @@
-# Laboratorium 01
+# Programowanie Obiektowe
 
-## Klasa i obiekt
+## Laboratorium 01 - Klasa i obiekt
 
 ### Zadanie 1
 

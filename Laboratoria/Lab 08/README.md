@@ -1,6 +1,6 @@
-# Laboratorium 8
+# Programowanie Obiektowe 
 
-## Powtórzenie 1
+## Laboratorium 08 - Powtórzenie 1
 
 ### Zadanie 1
 

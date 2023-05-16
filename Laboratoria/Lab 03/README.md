@@ -1,6 +1,6 @@
 # Programowanie Obiektowe
 
-## Laboratorium 3 - Wzorce projektowe
+## Laboratorium 03 - Wzorce projektowe
 
 ### Zadanie 1
 

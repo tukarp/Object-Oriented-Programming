@@ -1,6 +1,6 @@
 # Programowanie Obiektowe
 
-## Laboratorium 2 - Paradygmaty programowania obiektowego
+## Laboratorium 02 - Paradygmaty programowania obiektowego
 
 ### Zadanie 1
 

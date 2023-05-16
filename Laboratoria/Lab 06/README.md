@@ -1,6 +1,6 @@
-# Laboratorium 6
+# Programowanie Obiektowe
 
-## Strumienie
+## Laboratorium 06 - Strumienie
 
 ### Zadanie 1
 

@@ -1,6 +1,6 @@
-# Laboratorium 5 
+# Programowanie Obiektowe
 
-## Wyjątki
+## Laboratorium 05 - Wyjątki
 
 ### Zadanie 1
 
