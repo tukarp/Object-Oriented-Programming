@@ -1,6 +1,6 @@
-# Laboratorium 3
+# Programowanie Obiektowe
 
-## Wzorce projektowe
+## Laboratorium 3 - Wzorce projektowe
 
 ### Zadanie 1
 
@@ -70,9 +70,7 @@ Zdefiniuj klasę DropShadowDecorator dziedziczącą po ShapeDecorator. Jej zadan
 
 oraz w metodzie toSvg:
 
-```
-"filter=\"url(#f%d)\" ", index
-```
+```"filter=\"url(#f%d)\" ", index```
 
 gdzie w obu przypadkach index jest liczbą całkowitą, unikalną dla tego filtra. Unikalność indeksu zagwarantuj przy użyciu prywatnego, statycznego pola klasy.
 
@@ -95,6 +93,4 @@ gdzie stop.offset jest liczbą zmiennoprzecinkową z przedziału 0-1, a stop.col
 Wewnątrz klasy zdefiniuj klasę Builder. W klasie Builder stwórz metodę, która przyjmuje offset i kolor, a której wielokrotne wywołania pozwalają stworzyć tablicę tych wartości definiującą przebieg gradientu.
 W metodzie toSvg klasy zewnętrznej wykorzystaj sformatowany napis:
 
-```
-"fill=\"url(#g%d)\" ", index
-```
+```"fill=\"url(#g%d)\" ", index```
