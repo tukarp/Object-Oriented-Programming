@@ -5,10 +5,8 @@ import com.company.shapedecorator.*;
 public class Main {
     public static void main(String[] args) {
         Polygon poly = new Polygon(new Vec2[]{new Vec2(120, 60), new Vec2(270, 280), new Vec2(240, 320), new Vec2(110, 80)});
-        //SvgScene scene=new SvgScene();
         SvgScene scene = SvgScene.getInstance();
 
-        //Shape shape = new FlatFillShapeDecorator(poly, "red");
         Shape shape = new GradientFillShapeDecorator.Builder()
                 .setShape(poly)
                 .addStop(0, "red")
@@ -21,7 +19,6 @@ public class Main {
         shape = new TransformationDecorator.Builder()
                 .setShape(shape)
                 .setRotate(-30, new Vec2(20, 30))
-                //.setScale(new Point(2, 3))
                 .build();
 
         shape = new DropShadowDecorator(shape);

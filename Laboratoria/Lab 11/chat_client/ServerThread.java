@@ -43,8 +43,6 @@ public class ServerThread extends Thread {
                     }
                     case "FI" -> { //file
                         receiveFile(postfix);
-                        //String[] postfixArr = postfix.split(" ",3);
-                        //receiver.receiveFile(postfixArr[0], Long.parseLong(postfixArr[1]), postfixArr[2]);
                     }
                     case "LN" -> receiver.receiveLoginBroadcast(postfix);
                     case "LT" -> receiver.receiveLogoutBroadcast(postfix);
@@ -76,12 +74,7 @@ public class ServerThread extends Thread {
         writer.println("ON");
     }
 
-    //public void sendFile(String command) {
     public void sendFile(String recipientName, String filePath) {
-//        String commandArr[] = command.split(" ");
-//        String recipientName = commandArr[0];
-//        String filePath = commandArr[1];
-
         File file = new File(filePath);
 
         try {
@@ -127,7 +120,6 @@ public class ServerThread extends Thread {
                 receivedSize += count;
                 receiver.receiveFileProgress((int)(receivedSize * 100 / fileSize));
 
-                //System.out.print("\r"+((int)(receivedSize * 100 / fileSize)) + "%");
                 fileOut.write(buffer, 0, count);
             }
             System.out.println();

@@ -46,8 +46,8 @@ public class Line {
         double a;
         a = (line.p1.y - line.p2.y) / (line.p1.x - line.p2.x);
         double b;
-        a= -1 / a;
-        b= point.y - a * point.x;
+        a = -1 / a;
+        b = point.y - a * point.x;
 
         double x0 = point.x;
         double y0 = point.y;

@@ -45,7 +45,7 @@ public class TemporaryPerson extends Person{
 //        }
 //    }
 
-    //Zadanie 8
+    // Zadanie 8
     public void convert(Map<String, TemporaryPerson> temporaryMap) {
         for(String parentName : parentNames) {
             Person parent = temporaryMap.get(parentName);

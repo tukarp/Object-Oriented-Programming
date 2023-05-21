@@ -68,7 +68,7 @@ public class FileCommander {
         }
     }
 
-    //Zadanie 3
+    // Zadanie 3
     public List<String> find(String s) {
         try(Stream<Path> stream = Files.walk(path)){
             return stream.filter(currentPath -> currentPath.getFileName().toString().contains(s))

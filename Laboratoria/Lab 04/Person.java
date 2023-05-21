@@ -31,7 +31,7 @@ public class Person {
         return birth;
     }
 
-    //zadanie 1
+    // Zadanie 1
     public static Person fromFile(String path) {
         String name = null;
         LocalDate birth = null, death = null;
@@ -51,7 +51,7 @@ public class Person {
         return LocalDate.parse(str, DateTimeFormatter.ofPattern("dd.MM.yyyy"));
     }
 
-    //Zadanie 2
+    // Zadanie 2
     public static Person[] fromCsv(String path) {
         List<Person> result = new ArrayList<>();
         String line;
@@ -74,7 +74,7 @@ public class Person {
         return people;
     }
 
-    //Zadanie 3a
+    // Zadanie 3a
     public static void toFile(String path, Person person) {
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(path));
@@ -93,7 +93,7 @@ public class Person {
         return date.format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
     }
 
-    //Zadanie 3b
+    // Zadanie 3b
     public static void toCsv(String path, Person[] people) {
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(path));
@@ -109,7 +109,7 @@ public class Person {
         }
     }
 
-    //Zadanie 3c
+    // Zadanie 3c
     public static void sortCsv(String path) {
         Person[] people = Person.fromCsv(path);
         //Arrays.sort(people,Comparator.comparing(Person::getBirth));
@@ -121,7 +121,7 @@ public class Person {
         Person.toCsv(path, people);
     }
 
-    //Zadanie 4a
+    // Zadanie 4a
     public static void toDirectory(String path, Person people[]) {
         File dir = new File(path);
         if(dir.exists() && dir.isDirectory()) {
@@ -141,7 +141,7 @@ public class Person {
         }
     }
 
-    //Zadanie 4b
+    // Zadanie 4b
     public static Person[] fromDirectory(String path) {
         File[] files = new File(path).listFiles();
         Person[] result = new Person[files.length];
@@ -151,7 +151,7 @@ public class Person {
         return result;
     }
 
-    //Zadanie 5
+    // Zadanie 5
     public static void toBinaryFile(String path, Person people[]) {
         try {
             FileOutputStream fos = new FileOutputStream(path);

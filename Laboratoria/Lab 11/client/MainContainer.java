@@ -50,7 +50,6 @@ public class MainContainer {
     private void send() {
         String text = inputField.getText();
         serverThread.broadcast(text);
-        //inputField.clear();
     }
 
     @FXML

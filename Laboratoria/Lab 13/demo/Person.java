@@ -47,7 +47,6 @@ public class Person {
 
     public static List<Person> selectAll() throws SQLException {
         Statement statement = DatabaseConnection.getConnection().createStatement();
-        //statement.executeQuery("SELECT * FROM person");
         return resultSetToList(statement.executeQuery("SELECT * FROM person"));
     }
 

@@ -9,7 +9,7 @@ import java.util.*;
 public class DirectoryPersonPersistenceManager implements PersonPersistenceManager{
     private enum FileExpectation{ExpectsDeath, ExpectsParent, ExpectsChild}
 
-//Zadanie 1
+    // Zadanie 1
 //    @Override
 //    public Person[] load(String path) {
 //        File[] files = new File(path).listFiles();
@@ -55,7 +55,7 @@ public class DirectoryPersonPersistenceManager implements PersonPersistenceManag
         }
     }
 
-//Zadanie 2
+    // Zadanie 2
 //    @Override
 //    public Person[] load(String path) throws AmbigiousPersonException {
 //        Map<String, TemporaryPerson> temporaryMap = new HashMap<>();
@@ -88,7 +88,7 @@ public class DirectoryPersonPersistenceManager implements PersonPersistenceManag
 //        return new TemporaryPerson(name, birth, death, path);
 //    }
 
-    //Zadanie 3
+    // Zadanie 3
 //    private TemporaryPerson fromFile(String path) {
 //        Scanner reader;
 //        String name = null;

@@ -28,7 +28,6 @@ public class DeathCauseStatisticsList {
 
     public List<DeathCauseStatistic> mostDeadlyDiseases(int age, int n) {
         List<DeathCauseStatistic> values = new ArrayList<>(causeStats);
-        //Collections.sort(values, Comparator.comparingInt((DeathCauseStatistic a) -> a.getDeaths(age).deathCount).reversed());
         values.sort(Comparator.comparingInt((DeathCauseStatistic a) -> a.getDeaths(age).deathCount).reversed());
         return values.subList(0,n);
     }
