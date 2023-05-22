@@ -23,7 +23,7 @@ public class DatabaseConnection {
     public static void disconnect() {
         try {
             connection.close();
-            System.out.println("Disonnected");
+            System.out.println("Disconnected");
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
