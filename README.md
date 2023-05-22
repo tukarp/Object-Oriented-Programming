@@ -1,6 +1,6 @@
 # Programowanie Obiektowe
 
-## Spis Treści
+## Spis treści
 
 ### Laboratoria
 
