@@ -18,7 +18,7 @@ public class FileCommander {
         return path.toString();
     }
     public void cd(String path){
-        this.path=this.path.resolve(path);
+        this.path = this.path.resolve(path);
     }
     public static String formatDirBraces(String text) {
         return "[" + text + "]";
@@ -74,7 +74,7 @@ public class FileCommander {
             return stream.filter(currentPath -> currentPath.getFileName().toString().contains(s))
                     .map(Path::toString)
                     .collect(Collectors.toList());
-        }catch (IOException e){
+        } catch (IOException e){
             e.printStackTrace();
         }
         return Collections.emptyList();
