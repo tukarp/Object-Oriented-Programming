@@ -45,7 +45,7 @@ public class ClientThread extends Thread {
         }
     }
 
-    public void send(String message){
+    public void send(String message) {
         writer.println(message);
     }
 

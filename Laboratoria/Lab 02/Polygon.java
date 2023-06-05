@@ -14,7 +14,7 @@ public class Polygon extends Shape{
         arr[index] = point;
     }
 
-    public void setPoints(Point points[]){
+    public void setPoints(Point points[]) {
         arr = points;
     }
 

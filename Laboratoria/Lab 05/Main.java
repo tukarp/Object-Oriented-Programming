@@ -10,8 +10,7 @@ public class Main {
             for(Person person : people) {
                 System.out.println(person);
             }
-        }
-        catch (AmbigiousPersonException | ParentingAgeException |ParentChildInconsistencyException e) {
+        } catch (AmbigiousPersonException | ParentingAgeException | ParentChildInconsistencyException e) {
             e.printStackTrace();
         }
     }

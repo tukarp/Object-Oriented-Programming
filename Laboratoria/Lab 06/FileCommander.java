@@ -14,10 +14,10 @@ public class FileCommander {
     public FileCommander() {
         this.path = Path.of(System.getProperty("user.home"));
     }
-    public String pwd(){
+    public String pwd() {
         return path.toString();
     }
-    public void cd(String path){
+    public void cd(String path) {
         this.path = this.path.resolve(path);
     }
     public static String formatDirBraces(String text) {
@@ -43,7 +43,7 @@ public class FileCommander {
         return result;
     }
 
-    public List<String> ls(Function<String, String> formatDir, String substring){
+    public List<String> ls(Function<String, String> formatDir, String substring) {
         Comparator<Path> c = (p1, p2) ->
                 Boolean.compare(Files.isDirectory(p2),Files.isDirectory(p1));
         c = c.thenComparing(p -> p.getFileName().toString());
@@ -70,11 +70,11 @@ public class FileCommander {
 
     // Zadanie 3
     public List<String> find(String s) {
-        try(Stream<Path> stream = Files.walk(path)){
+        try(Stream<Path> stream = Files.walk(path)) {
             return stream.filter(currentPath -> currentPath.getFileName().toString().contains(s))
                     .map(Path::toString)
                     .collect(Collectors.toList());
-        } catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
         return Collections.emptyList();

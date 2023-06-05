@@ -43,7 +43,7 @@ public class MainContainer {
     }
 
     @FXML
-    public void onInputEnter(ActionEvent actionEvent){
+    public void onInputEnter(ActionEvent actionEvent) {
         send();
     }
 

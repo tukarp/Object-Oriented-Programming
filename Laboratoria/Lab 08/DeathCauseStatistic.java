@@ -6,7 +6,7 @@ public class DeathCauseStatistic {
     private String key;
     private int ageBracket[];
 
-    public class AgeBracketDeaths{
+    public class AgeBracketDeaths {
         final public int young, old, deathCount;
         @Override
         public String toString() {

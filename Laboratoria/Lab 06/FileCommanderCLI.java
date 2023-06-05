@@ -11,14 +11,14 @@ public class FileCommanderCLI {
     private FileCommander fileCommander;
     private BufferedOutputStream outputStream;
 
-    public FileCommanderCLI(InputStream in, OutputStream out){
+    public FileCommanderCLI(InputStream in, OutputStream out) {
         this.reader = new BufferedReader(new InputStreamReader(in));
         this.writer = new BufferedWriter(new OutputStreamWriter(out));
         this.outputStream = new BufferedOutputStream(outputStream);
         this.fileCommander = new FileCommander();
     }
 
-    public void eventLoop(){
+    public void eventLoop() {
         while(true){
             try {
                 String line = reader.readLine();
@@ -30,7 +30,7 @@ public class FileCommanderCLI {
         }
     }
 
-    public void runCommand(String command)throws IOException{
+    public void runCommand(String command)throws IOException {
         String[] commandArr =command.split(" ");
 
         switch (commandArr[0]) {

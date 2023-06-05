@@ -21,7 +21,7 @@ public class ServerThread extends Thread {
         }
     }
 
-    public void run(){
+    public void run() {
         try {
             InputStream input = socket.getInputStream();
             OutputStream output = socket.getOutputStream();
@@ -56,7 +56,7 @@ public class ServerThread extends Thread {
         }
     }
 
-    private void send(String message){
+    private void send(String message) {
         writer.println(message);
     }
 

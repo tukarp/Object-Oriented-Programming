@@ -20,7 +20,7 @@ public class Server {
         }
     }
 
-    public void listen(){
+    public void listen() {
         while(true){
             Socket clientSocket;
             try {
@@ -39,7 +39,7 @@ public class Server {
         broadcastLogout(client);
     }
 
-    public void broadcast(ClientThread sender, String message){
+    public void broadcast(ClientThread sender, String message) {
         for(var currentClient : clients) {
             if(currentClient != sender) {
                 currentClient.send(sender.getClientName() + ": " + message);
