@@ -12,16 +12,20 @@ public class Style {
 
     public String toSvg() {
         String styleString = "";
-        if(fillColor != null)
+        if(fillColor != null) {
             styleString += "fill:" + fillColor + ";";
-        else
+        } else {
             styleString += "fill:transparent;";
-        if(strokeColor != null)
+        }
+        if(strokeColor != null) {
             styleString += "stroke:" + strokeColor + ";";
-        else
+        } else {
             styleString += "stroke:black;";
-        if(strokeWidth != null)
+        }
+        if(strokeWidth != null) {
             styleString += "stroke-width:" + strokeWidth + ";";
+        }
+        
         return styleString;
     }
 }

@@ -1,25 +1,29 @@
 package com.company;
 
+import java.util.function.Function;
+import java.util.stream.Collectors;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.function.Function;
-import java.util.stream.Collectors;
 
 public abstract class Product {
     protected String name;
     public static List<Product> products = new ArrayList<>();
+
     public Product(String name) {
         this.name = name;
     }
+
     public String getName() {
         return name;
     }
+
     public abstract double getPrice(int year, int month);
+    
     public static void clearProducts() {
         products.clear();
     }

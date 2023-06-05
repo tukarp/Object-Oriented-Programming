@@ -1,13 +1,13 @@
-package sample;
+package com.company;
 
+import javafx.scene.canvas.GraphicsContext;
 import javafx.animation.AnimationTimer;
+import javafx.scene.canvas.Canvas;
+import javafx.scene.paint.Color;
 import javafx.geometry.Point2D;
+import java.util.ArrayList;
 import javafx.scene.Cursor;
 import javafx.scene.Scene;
-import javafx.scene.canvas.Canvas;
-import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.paint.Color;
-import java.util.ArrayList;
 import java.util.List;
 
 public class GameCanvas extends Canvas {
@@ -23,25 +23,28 @@ public class GameCanvas extends Canvas {
         @Override
         public void handle(long now) {
             double diff = (now - lastUpdate) / 1_000_000_000.;
+
             ball.updatePosition(diff);
             draw();
+
             lastUpdate = now;
             if(shouldBallBounceHorizontally()){
                 ball.bounceHorizontally();
-            }
-            if(shouldBallBounceVertically()){
+            } if(shouldBallBounceVertically()){
                 ball.bounceVertically();
-            }
-            if(shouldBallBounceFromPaddle())
+            } if(shouldBallBounceFromPaddle()) {
                 ball.bounceFromPaddle((-paddle.getPosition() + (ball.x + ball.width / 2)) / paddle.width);
+            }
             for(var brick : bricks) {
                 Point2D[] borderPoints = ball.borderPoints();
                 Brick.CrushType crushType = brick.crushes(borderPoints[0], borderPoints[1], borderPoints[2], borderPoints[3]);
+
                 if(crushType != Brick.CrushType.NoCrush) {
-                    if(crushType == Brick.CrushType.HorizontalCrush)
+                    if(crushType == Brick.CrushType.HorizontalCrush) {
                         ball.bounceVertically();
-                    else
+                    } else {
                         ball.bounceHorizontally();
+                    }
                     bricks.remove(brick);
                     break;
                 }
@@ -105,9 +108,10 @@ public class GameCanvas extends Canvas {
         bricks = new ArrayList<>();
         Color colors[] = new Color[]{Color.RED, Color.BEIGE, Color.BROWN, Color.GREENYELLOW, Color.BLUE};
         Brick.setGridRows(20,10);
-        for(int i = 0; i < 5; i++){
-            for(int j = 0; j < Brick.getGridColumns(); j++)
+        for(int i = 0; i < 5; i++) {
+            for(int j = 0; j < Brick.getGridColumns(); j++) {
                 bricks.add(new Brick(j, i + 2, colors[i]));
+            }
         }
     }
 }

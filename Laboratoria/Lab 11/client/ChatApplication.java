@@ -1,15 +1,15 @@
-package com.example.lb11_client;
+package com.example.client;
 
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.TextInputDialog;
-import javafx.stage.Stage;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.Optional;
 import com.company.chatclient.ServerThread;
+import javafx.application.Application;
+import java.io.InputStreamReader;
+import java.io.BufferedReader;
+import javafx.fxml.FXMLLoader;
+import java.io.IOException;
+import java.util.Optional;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 public class ChatApplication extends Application {
     @Override

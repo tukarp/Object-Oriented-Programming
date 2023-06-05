@@ -1,30 +1,26 @@
-package pl.umcs;
+package com.company;
 
+import java.util.LinkedList;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedList;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
         List<String> list = new CustomList<>();
+
         list.add("ala");
         list.add("ma");
         list.add("kota");
 
-        for(int i = 0; i < list.size(); i++) // skrajnie nieoptymalne
+        for(int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));
-
+        }
         System.out.println("---");
 
-//        System.out.println(list.removeFirst());
-//        System.out.println(list.removeFirst());
-//        System.out.println(list.removeFirst());
-//        System.out.println(list.removeFirst());
-
-        for(String entry : list) // optymalne, wykorzystuje iterator
+        for(String entry : list) {
             System.out.println(entry);
-
+        }
         System.out.println("---");
 
         list.stream().forEach(System.out::println);
@@ -37,6 +33,7 @@ public class Main {
 
         List<Integer> list1 = new ArrayList(List.of(1, 2, 3, 4, 5, 6, 100));
         List<Integer> list2 = new ArrayList(List.of(1, 2, 3, 4, 5, 6, 200));
+
         CountComparator<List<Integer>> countComparator = new CountComparator();
         System.out.println(countComparator.compare(list1, list2));
 
@@ -46,9 +43,11 @@ public class Main {
 
     public static <T> List<T> filter(List<T> objectList, Class filterClass) {
         List<T> resultList = new ArrayList<>();
-        for (T item : objectList)
-            if (filterClass.equals(item.getClass()))
+        for (T item : objectList) {
+            if (filterClass.equals(item.getClass())) {
                 resultList.add(item);
+            }
+        }
         return resultList;
     }
 

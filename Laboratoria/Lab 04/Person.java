@@ -1,13 +1,11 @@
 package com.company;
 
-
-import java.io.*;
-import java.nio.file.Files;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.time.format.DateTimeFormatter;
+import java.time.LocalDate;
+import java.nio.file.Files;
 import java.util.*;
-
+import java.io.*;
 
 public class Person {
     private String name;
@@ -60,10 +58,13 @@ public class Person {
             while(null != (line = reader.readLine())) {
                 StringTokenizer tokenizer = new StringTokenizer(line, ";");
                 String name = tokenizer.nextToken();
+
                 LocalDate birth = parseDate(tokenizer.nextToken());
                 LocalDate death = null;
+
                 if(tokenizer.hasMoreTokens())
                     death = parseDate(tokenizer.nextToken());
+                
                 result.add(new Person(name, birth, death));
             }
             reader.close();
@@ -80,6 +81,7 @@ public class Person {
             BufferedWriter writer = new BufferedWriter(new FileWriter(path));
             writer.write(person.name + "\n");
             writer.write(parseDate(person.birth) + "\n");
+
             if(person.death != null) {
                 writer.write(parseDate(person.death) + "\n");
             }

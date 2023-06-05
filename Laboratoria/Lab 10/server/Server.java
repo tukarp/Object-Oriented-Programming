@@ -1,12 +1,12 @@
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.net.ServerSocket;
-import java.net.Socket;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
+import java.io.DataOutputStream;
+import java.io.DataInputStream;
+import java.net.ServerSocket;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Optional;
+import java.net.Socket;
+import java.util.List;
 
 public class Server {
     private ServerSocket serverSocket;
@@ -40,21 +40,25 @@ public class Server {
     }
 
     public void broadcast(ClientThread sender, String message){
-        for(var currentClient : clients)
-            if(currentClient != sender)
+        for(var currentClient : clients) {
+            if(currentClient != sender) {
                 currentClient.send(sender.getClientName() + ": " + message);
-
+            }
+        }
     }
 
     public void broadcastLogin(ClientThread client) {
-        for(var currentClient : clients)
-            if(currentClient != client)
+        for(var currentClient : clients) {
+            if(currentClient != client) {
                 currentClient.send(client.getClientName() + " joined the chat");
+            }
+        }
     }
 
     public void broadcastLogout(ClientThread client) {
-        for(var currentClient : clients)
+        for(var currentClient : clients) {
             currentClient.send(client.getClientName() + " left the chat");
+        }
     }
 
     private Optional<ClientThread> getClient(String clientName) {
@@ -70,7 +74,9 @@ public class Server {
         Optional<ClientThread> recipient = getClient(recipientName);
         if(recipient.isPresent()) {
             recipient.get().send(sender.getClientName() + " whispers: " + messageArr[1]);
-        } else sender.send("No such user: " + recipientName);
+        } else {
+            sender.send("No such user: " + recipientName);
+        } 
     }
 
     public void online(ClientThread sender) {
@@ -103,6 +109,8 @@ public class Server {
                 System.out.println(receivedSize + " " + (fileSize - receivedSize));
                 fileOut.write(buffer, 0, count);
             }
-        } else sender.send("No such user: " + recipientName);
+        } else {
+            sender.send("No such user: " + recipientName);
+        }
     }
 }

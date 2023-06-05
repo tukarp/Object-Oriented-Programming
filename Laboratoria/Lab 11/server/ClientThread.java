@@ -1,14 +1,15 @@
-import java.io.*;
 import java.net.Socket;
+import java.io.*;
 
 public class ClientThread extends Thread {
-    public Socket getSocket() {
-        return socket;
-    }
     private Socket socket;
     private PrintWriter writer;
     private Server server;
     private String clientName = null;
+
+    public Socket getSocket() {
+        return socket;
+    }
 
     public ClientThread(Socket socket, Server server) {
         this.socket = socket;
@@ -19,8 +20,10 @@ public class ClientThread extends Thread {
         try {
             InputStream input = socket.getInputStream();
             OutputStream output = socket.getOutputStream();
+
             BufferedReader reader = new BufferedReader(new InputStreamReader(input));
             writer = new PrintWriter(output, true);
+
             String message;
             while ((message = reader.readLine()) != null){
                 String prefix = message.substring(0,2);

@@ -1,8 +1,8 @@
-package sample;
+package com.company;
 
-import javafx.geometry.Point2D;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
+import javafx.geometry.Point2D;
 
 public class Ball extends GraphicsItem{
     private Point2D moveVector = new Point2D(1, -1).normalize();
@@ -33,7 +33,6 @@ public class Ball extends GraphicsItem{
 
     public void bounceVertically() {
         moveVector = new Point2D(-moveVector.getX() ,moveVector.getY()).normalize();
-
     }
 
     public void bounceHorizontally() {

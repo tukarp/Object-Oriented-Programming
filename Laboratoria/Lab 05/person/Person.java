@@ -1,12 +1,10 @@
 package com.company.person;
 
-
-import java.io.*;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.time.format.DateTimeFormatter;
+import java.time.LocalDate;
 import java.util.*;
-
+import java.io.*;
 
 public class Person implements Serializable{
     private String name;
@@ -43,7 +41,7 @@ public class Person implements Serializable{
         str += "} children={";
         for(var child : children )
             str += child.name + ", ";
-        str+ = "}}";
+        str + = "}}";
 
         return str;
     }

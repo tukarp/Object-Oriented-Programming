@@ -19,8 +19,10 @@ public class Polygon {
 
     public String toSvg() {
         String pointsString = "";
+        
         for(Point point : arr)
             pointsString += point.x + "," + point.y + " ";
+        
         return String.format(Locale.ENGLISH,"<polygon points=\"%s\" />", pointsString);
     }
 }

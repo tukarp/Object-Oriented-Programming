@@ -1,20 +1,20 @@
-package com.example.circleapp.server;
+package com.example.server;
 
-import com.example.circleapp.DatabaseConnection;
-import com.example.circleapp.Dot;
-
-import java.io.IOException;
-import java.net.ServerSocket;
-import java.net.Socket;
+import com.example.DatabaseConnection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.net.ServerSocket;
 import java.sql.SQLException;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.sql.ResultSet;
+import java.net.Socket;
+import com.example.Dot;
 import java.util.List;
 
 public class Server extends Thread {
     private ServerSocket serverSocket;
     private String address;
+    private int port;
 
     public void setAddress(String address) {
         this.address = address;
@@ -24,7 +24,6 @@ public class Server extends Thread {
         this.port = port;
     }
 
-    private int port;
     private List<ClientThread> clients = new ArrayList<>();
 
     public void run(){
@@ -38,7 +37,9 @@ public class Server extends Thread {
             while(true){
                 clientSocket = serverSocket.accept();
                 ClientThread thread = new ClientThread(clientSocket, this);
+
                 System.out.println("Client connected");
+
                 clients.add(thread);
                 thread.start();
                 getSavedDots().stream().forEach(dot -> thread.send(dot.toMessage()));
@@ -51,11 +52,9 @@ public class Server extends Thread {
     public void broadcast(String message) {
         clients.forEach(clientThread -> clientThread.send(message));
         saveDot(Dot.fromMessage(message));
-
     }
 
     /*
-
     CREATE TABLE dot (
         id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
         x INTEGER NOT NULL,
@@ -63,8 +62,7 @@ public class Server extends Thread {
         color TEXT NOT NULL,
         radius INTEGER NOT NULL,
     );
-
-     */
+    */
 
     public void saveDot(Dot dp) {
         try {
@@ -86,13 +84,17 @@ public class Server extends Thread {
         try {
             PreparedStatement statement = DatabaseConnection.getConnection()
                     .prepareStatement("SELECT * FROM dot");
+            
             statement.execute();
             ResultSet resultSet = statement.getResultSet();
+
             while(resultSet.next()) {
                 int x = resultSet.getInt("x");
                 int y = resultSet.getInt("y");
+
                 String color = resultSet.getString("color");
                 int radius = resultSet.getInt("radius");
+                
                 dots.add(new Dot(x, y, color, radius));
             }
         } catch (SQLException e) {

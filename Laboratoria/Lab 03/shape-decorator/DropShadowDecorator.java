@@ -1,7 +1,7 @@
 package com.company.shapedecorator;
 
-import com.company.Shape;
 import com.company.SvgScene;
+import com.company.Shape;
 
 public class DropShadowDecorator extends ShapeDecorator {
     private static int index = 1;

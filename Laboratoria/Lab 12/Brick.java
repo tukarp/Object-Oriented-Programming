@@ -1,8 +1,8 @@
-package sample;
+package com.company;
 
-import javafx.geometry.Point2D;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
+import javafx.geometry.Point2D;
 
 public class Brick extends GraphicsItem{
     private static int gridRows;
@@ -16,6 +16,7 @@ public class Brick extends GraphicsItem{
         x = gridX * width;
         y = gridY * height;
     }
+    
     public enum CrushType {NoCrush, HorizontalCrush, VerticalCrush};
 
     public static int getGridRows() {

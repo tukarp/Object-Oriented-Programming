@@ -1,12 +1,12 @@
 package com.company;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Optional;
 import java.util.Scanner;
+import java.io.File;
 
 public class ICDCodeTabularOptimizedForMemory implements ICDCodeTabular{
     private String path;

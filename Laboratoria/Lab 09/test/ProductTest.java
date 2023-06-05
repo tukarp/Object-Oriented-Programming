@@ -1,23 +1,23 @@
 package com.company;
 
-import org.junit.jupiter.api.*;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.Arguments;
-import org.junit.jupiter.params.provider.CsvFileSource;
-import org.junit.jupiter.params.provider.MethodSource;
-
-import java.io.*;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
+import java.io.*;
 
+import org.junit.jupiter.params.provider.CsvFileSource;
+import org.junit.jupiter.params.provider.MethodSource;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.api.*;
+
+import static org.junit.jupiter.params.provider.Arguments.arguments;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assumptions.assumeTrue;
-import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 class ProductTest {
     @Test
@@ -33,8 +33,8 @@ class ProductTest {
     void priceIndexThrowsException() {
         int year = 2000;
         int month = 1;
-
-         assertThrows(IndexOutOfBoundsException.class, () -> Product.priceIndex(year, month));
+        
+        assertThrows(IndexOutOfBoundsException.class, () -> Product.priceIndex(year, month));
     }
 
     private static Stream<Arguments> monthYearIndex() {
@@ -73,20 +73,18 @@ class ProductTest {
     class GetProductTest {
         static Path tmpDir;
         private static void createFileStub(Path dir, String name) throws IOException {
-            File file = File.createTempFile("product", ".csv", dir.toFile());//new (String.valueOf(dir.resolve(filename)));
-            // file.deleteOnExit();
+            File file = File.createTempFile("product", ".csv", dir.toFile());
             FileWriter fileWriter = new FileWriter(file);
             PrintWriter printWriter = new PrintWriter(fileWriter);
             printWriter.println(name);
-            printWriter.println(); // linia z nagłówkiem
-            printWriter.println(); // linia z cenami
+            printWriter.println();
+            printWriter.println();
             printWriter.close();
         }
 
         @BeforeAll
         static void populateProducts() throws IOException {
             tmpDir = Files.createTempDirectory("products");
-            //tmpDir.toFile().deleteOnExit(); // nie działa, kiedy są pliki, nawet auto-usuwane
 
             System.out.println(tmpDir);
 

@@ -1,7 +1,7 @@
-package com.example.circleapp.server;
+package com.example.server;
 
-import java.io.*;
 import java.net.Socket;
+import java.io.*;
 
 public class ClientThread extends Thread {
     private Socket socket;
@@ -17,8 +17,10 @@ public class ClientThread extends Thread {
         try {
             InputStream input = socket.getInputStream();
             OutputStream output = socket.getOutputStream();
+
             BufferedReader reader = new BufferedReader(new InputStreamReader(input));
             writer = new PrintWriter(output, true);
+            
             String message;
             while((message = reader.readLine()) != null) {
                 server.broadcast(message);

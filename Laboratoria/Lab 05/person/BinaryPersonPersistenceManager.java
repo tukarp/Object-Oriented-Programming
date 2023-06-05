@@ -1,8 +1,8 @@
 package com.company.person;
 
-import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.io.*;
 
 public class BinaryPersonPersistenceManager implements PersonPersistenceManager{
     @Override
@@ -19,7 +19,6 @@ public class BinaryPersonPersistenceManager implements PersonPersistenceManager{
                     people.add((Person) obj);
                 }
             }
-
         } catch (EOFException e) {
         } catch (IOException e) {
             e.printStackTrace();

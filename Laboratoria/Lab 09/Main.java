@@ -11,9 +11,6 @@ public class Main {
             Product p1 = Product.getProduct("Buraki");
             System.out.println(p1.getPrice(2012, 5));
 
-            //Product p2 = Product.getProduct("Mięso"); // <- rzuca wyjątek AmbigiousProductException
-            //Product p3 = Product.getProduct("Komputer"); // <- rzuca wyjątek IndexOutOfBoundsException
-
             Cart cart = new Cart();
             cart.addProduct(Product.getProduct("Benzyna"), 100);
             cart.addProduct(Product.getProduct("Jabłka"), 20);
@@ -21,6 +18,7 @@ public class Main {
             cart.addProduct(Product.getProduct("Wizyta u lekarza"), 2);
             cart.addProduct(Product.getProduct("Ziemniaki"), 5);
             System.out.println(cart.getInflation(2020,1, 2022, 3));
+            
         } catch (AmbigiousProductException | IndexOutOfBoundsException e) {
             e.printStackTrace();
         }

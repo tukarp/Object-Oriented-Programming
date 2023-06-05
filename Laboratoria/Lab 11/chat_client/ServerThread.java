@@ -1,8 +1,8 @@
 package com.company.chatclient;
 
-import java.io.*;
-import java.net.Socket;
 import java.nio.file.Path;
+import java.net.Socket;
+import java.io.*;
 
 public class ServerThread extends Thread {
     private Socket socket;
@@ -25,23 +25,25 @@ public class ServerThread extends Thread {
         try {
             InputStream input = socket.getInputStream();
             OutputStream output = socket.getOutputStream();
+
             BufferedReader reader = new BufferedReader(new InputStreamReader(input));
             writer = new PrintWriter(output, true);
+
             String message;
             while((message = reader.readLine()) != null){
                 String prefix = message.substring(0,2);
                 String postfix = message.substring(2);
                 System.out.println(message);
                 switch(prefix) {
-                    case "BR" -> { //broadcast
+                    case "BR" -> {
                         String[] postfixArr = postfix.split(" ",2);
                         receiver.receiveBroadcast(postfixArr[0], postfixArr[1]);
                     }
-                    case "WH" -> { //whisper
+                    case "WH" -> {
                         String[] postfixArr = postfix.split(" ",2);
                         receiver.receiveWhisper(postfixArr[0], postfixArr[1]);
                     }
-                    case "FI" -> { //file
+                    case "FI" -> {
                         receiveFile(postfix);
                     }
                     case "LN" -> receiver.receiveLoginBroadcast(postfix);
@@ -102,6 +104,7 @@ public class ServerThread extends Thread {
     public void receiveFile(String command) {
         String commandArr[] = command.split(" ");
         String senderName = commandArr[0];
+
         long fileSize = Long.parseLong(commandArr[1]);
         String fileName = commandArr[2];
         try {
@@ -115,11 +118,11 @@ public class ServerThread extends Thread {
 
             System.out.println("Receiving file from " + senderName + "...");
 
-            while (receivedSize < fileSize) {
+            while(receivedSize < fileSize) {
                 count = fileIn.read(buffer);
                 receivedSize += count;
-                receiver.receiveFileProgress((int)(receivedSize * 100 / fileSize));
 
+                receiver.receiveFileProgress((int)(receivedSize * 100 / fileSize));
                 fileOut.write(buffer, 0, count);
             }
             System.out.println();

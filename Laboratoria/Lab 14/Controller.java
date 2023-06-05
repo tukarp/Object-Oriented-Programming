@@ -2,14 +2,14 @@ package com.example.circleapp;
 
 import com.example.circleapp.client.ServerThread;
 import com.example.circleapp.server.Server;
-import javafx.fxml.FXML;
-import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.ColorPicker;
-import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.control.Slider;
+import javafx.scene.canvas.Canvas;
 import javafx.scene.paint.Color;
+import javafx.fxml.FXML;
 
 public class Controller {
     private Server server;
@@ -63,13 +63,5 @@ public class Controller {
         Color color = colorPicker.getValue();
 
         serverThread.send((int) event.getX(), (int) event.getY(), colorToHexString(color), (int) radius);
-        //drawCircle((int)event.getX(), (int)event.getY(), radius, color);
     }
-
-//    public void drawCircle(int x, int y, int radius, Color color) {
-//        GraphicsContext context = canvas.getGraphicsContext2D();
-//
-//        context.setFill(Color.web(dp.color()));
-//        context.fillOval(x - radius, y - radius, radius * 2, radius * 2);
-//    }
 }

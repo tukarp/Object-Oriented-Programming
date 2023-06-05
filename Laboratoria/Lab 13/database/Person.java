@@ -1,15 +1,16 @@
 package com.company;
 
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.LinkedList;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.List;
 
 public class Person {
     private int id;
-    private String first_name, last_name;
+    private String first_name;
+    private String last_name;
 
     @Override
     public String toString() {
@@ -29,7 +30,6 @@ public class Person {
     public static List<Person> selectAll() throws SQLException {
         Statement statement = DatabaseConnection.getConnection().createStatement();
         return resultSetToList(statement.executeQuery("SELECT * FROM person"));
-
     }
 
     public static List<Person> selectByLastName(String substring) throws SQLException {

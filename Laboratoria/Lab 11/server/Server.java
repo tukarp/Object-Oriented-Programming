@@ -1,12 +1,12 @@
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.net.ServerSocket;
-import java.net.Socket;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
+import java.io.DataOutputStream;
+import java.io.DataInputStream;
+import java.net.ServerSocket;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Optional;
+import java.net.Socket;
+import java.util.List;
 
 public class Server {
     private ServerSocket serverSocket;
@@ -40,19 +40,24 @@ public class Server {
     }
 
     public void broadcast(ClientThread sender, String message){
-        for(var currentClient : clients)
-            currentClient.send("BR"+sender.getClientName()+" "+message);
+        for(var currentClient : clients) {
+            currentClient.send("BR" + sender.getClientName() + " " + message);
+        }
+            
     }
 
     public void broadcastLogin(ClientThread client) {
-        for(var currentClient : clients)
-            if(currentClient != client)
-                currentClient.send("LN"+client.getClientName());
+        for(var currentClient : clients) {
+            if(currentClient != client) {
+                currentClient.send("LN" + client.getClientName());
+            }
+        }    
     }
 
     public void broadcastLogout(ClientThread client) {
-        for(var currentClient : clients)
-            currentClient.send("LT"+client.getClientName());
+        for(var currentClient : clients) {
+            currentClient.send("LT" + client.getClientName());
+        }
     }
 
     private Optional<ClientThread> getClient(String clientName) {
@@ -68,8 +73,9 @@ public class Server {
         Optional<ClientThread> recipient = getClient(recipientName);
         if(recipient.isPresent()) {
             recipient.get().send("WH"+sender.getClientName()+" "+messageArr[1]);
+        } else {
+            sender.send("NU"+recipientName);
         }
-        else sender.send("NU"+recipientName);
     }
 
     public void online(ClientThread sender) {
@@ -86,7 +92,6 @@ public class Server {
         String fileName = messageArr[2];
 
         Optional<ClientThread> recipient = getClient(recipientName);
-
         if(recipient.isPresent()) {
             DataInputStream fileIn = new DataInputStream(sender.getSocket().getInputStream());
             DataOutputStream fileOut = new DataOutputStream(recipient.get().getSocket().getOutputStream());
@@ -103,6 +108,8 @@ public class Server {
                 fileOut.write(buffer, 0, count);
             }
         }
-        else sender.send("NU"+recipientName);
+        else {
+            sender.send("NU"+recipientName);
+        }
     }
 }

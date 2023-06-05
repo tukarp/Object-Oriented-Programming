@@ -1,4 +1,4 @@
-package pl.umcs;
+package com.company;
 
 import java.util.function.Predicate;
 

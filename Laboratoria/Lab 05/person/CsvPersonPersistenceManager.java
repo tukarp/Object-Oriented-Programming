@@ -1,9 +1,9 @@
 package com.company.person;
 
-import java.io.*;
-import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
+import java.time.LocalDate;
 import java.util.*;
+import java.io.*;
 
 public class CsvPersonPersistenceManager implements PersonPersistenceManager{
     @Override
@@ -15,8 +15,10 @@ public class CsvPersonPersistenceManager implements PersonPersistenceManager{
             while(null != (line = reader.readLine())) {
                 StringTokenizer tokenizer = new StringTokenizer(line,";");
                 String name = tokenizer.nextToken();
+
                 LocalDate birth = Person.parseDate(tokenizer.nextToken());
                 LocalDate death = null;
+
                 if(tokenizer.hasMoreTokens())
                     death = Person.parseDate(tokenizer.nextToken());
                 result.add(new Person(name, birth, death));

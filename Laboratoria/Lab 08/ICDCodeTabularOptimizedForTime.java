@@ -1,13 +1,13 @@
 package com.company;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
+import java.util.Map;
+import java.io.File;
 
 public class ICDCodeTabularOptimizedForTime implements ICDCodeTabular{
     Map<String, String> descriptions = new HashMap<>();

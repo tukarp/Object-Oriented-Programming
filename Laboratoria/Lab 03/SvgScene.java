@@ -1,15 +1,15 @@
 package com.company;
 
-import java.io.FileWriter;
 import java.io.IOException;
+import java.io.FileWriter;
 import java.util.Arrays;
 
 public class SvgScene {
     private static SvgScene instance = null;
-
     private Shape shapes[] = new Shape[0];
     private String defs[] = new String[0];
-    private int width = 0, height = 0;
+    private int width = 0
+    private int height = 0;
 
     public void addShape(Shape shape) {
         shapes = Arrays.copyOf(shapes, shapes.length + 1);
@@ -29,7 +29,7 @@ public class SvgScene {
 
             for(Shape shape : shapes)
                 file.write("\t"+ shape.toSvg("") +"\n");
-            if(defs.length>=0) {
+            if(defs.length >= 0) {
                 file.write("<defs>\n");
                 for(var def : defs)
                     file.write(def + "\n");

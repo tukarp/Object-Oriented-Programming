@@ -1,7 +1,6 @@
 package com.company.shapedecorator;
 
 import com.company.Shape;
-
 import java.util.Locale;
 
 public class StrokeShapeDecorator extends ShapeDecorator {

@@ -24,8 +24,9 @@ public class Line {
 
     public static Line[] perpendicular(Line line, Point point) {
         double a;
-        a = (line.p1.y - line.p2.y) / (line.p1.x - line.p2.x);
         double b;
+
+        a = (line.p1.y - line.p2.y) / (line.p1.x - line.p2.x);
         a =- 1/a;
         b = point.y - a  * point.x;
 
@@ -44,14 +45,15 @@ public class Line {
 
     public static Line[] perpendicular(Line line, Point point, double r) {
         double a;
-        a = (line.p1.y - line.p2.y) / (line.p1.x - line.p2.x);
         double b;
+
+        a = (line.p1.y - line.p2.y) / (line.p1.x - line.p2.x);
         a = -1 / a;
+
         b = point.y - a * point.x;
 
         double x0 = point.x;
         double y0 = point.y;
-
 
         double root = Math.sqrt(- y0 * y0 + (2 * a * x0 + 2 * b) * y0 - a * a * x0 * x0 - 2 * a * b * x0 + (a * a + 1) * r * r - b * b);
         double x1 = - (root - a * y0 - x0 + a * b) / (a * a + 1);

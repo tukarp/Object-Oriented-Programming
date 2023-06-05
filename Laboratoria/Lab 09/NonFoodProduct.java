@@ -2,8 +2,8 @@ package com.company;
 
 import java.io.IOException;
 import java.nio.file.Path;
-import java.util.Arrays;
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class NonFoodProduct extends Product {
     Double[] prices;
@@ -26,9 +26,8 @@ public class NonFoodProduct extends Product {
                     .map(value -> value.replace(",", "."))
                     .map(Double::valueOf)
                     .toArray(Double[]::new);
-
             scanner.close();
-
+            
             return new NonFoodProduct(name, prices);
         } catch (IOException e) {
             throw new RuntimeException(e);

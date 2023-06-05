@@ -1,7 +1,7 @@
-package pl.umcs;
+package com.company;
 
-import java.util.*;
 import java.util.stream.Stream;
+import java.util.*;
 
 public class CustomList<T> extends AbstractList<T> {
     private class Node {
@@ -20,9 +20,9 @@ public class CustomList<T> extends AbstractList<T> {
         newNode.value = value;
         newNode.next = null;
 
-        if(head == null) // lista jest pusta
+        if(head == null)
             head = tail = newNode;
-        else { // lista ma co najmniej 1 element
+        else {
             tail.next = newNode;
             tail = newNode;
         }
@@ -31,8 +31,9 @@ public class CustomList<T> extends AbstractList<T> {
     public T getLast() {
         if(tail == null)
             throw new NoSuchElementException();
-        else
+        else {
             return tail.value;
+        }
     }
 
     public void addFirst(T value) {
@@ -40,9 +41,9 @@ public class CustomList<T> extends AbstractList<T> {
         newNode.value = value;
         newNode.next = null;
 
-        if(head == null) // lista jest pusta
-            head = tail = newNode;
-        else { // lista ma co najmniej 1 element
+        if(head == null) {
+             head = tail = newNode;
+        } else {
             newNode.next = head;
             head = newNode;
         }
@@ -55,21 +56,21 @@ public class CustomList<T> extends AbstractList<T> {
     }
 
     public T getFirst() {
-        if(head == null)
+        if(head == null) {
             throw new NoSuchElementException();
-        else
-            return head.value;
+        } else {
+             return head.value;
+        }
     }
 
     public T removeFirst() {
-        if(head == null)
+        if(head == null) {
             throw new NoSuchElementException();
-        else if(head == tail) { // jest 1 element
+        } else if(head == tail) {
             Node resultNode = tail;
             head = tail = null;
             return resultNode.value;
-        }
-        else {
+        } else {
             Node resultNode = head;
             head = head.next;
             return resultNode.value;
@@ -77,9 +78,9 @@ public class CustomList<T> extends AbstractList<T> {
     }
 
     public T removeLast() {
-        if(head == null)
-            throw new NoSuchElementException();
-        else if(head == tail) { // jest 1 element
+        if(head == null) {
+             throw new NoSuchElementException();
+        } else if(head == tail) {
             Node resultNode = tail;
             head = tail = null;
             return resultNode.value;
@@ -87,8 +88,11 @@ public class CustomList<T> extends AbstractList<T> {
         else {
             Node resultNode = tail;
             Node currentNode = head;
-            while(currentNode.next != tail)
+
+            while(currentNode.next != tail) {
                 currentNode = currentNode.next;
+            }
+
             currentNode.next = null;
             tail = currentNode;
             return resultNode.value;
@@ -116,21 +120,22 @@ public class CustomList<T> extends AbstractList<T> {
 
     @Override
     public T get(int index) {
-        if(head == null)
+        if(head == null) {
             throw new NoSuchElementException();
-        else {
+        } else {
             Node currentNode = head;
-            for(int i = 0; i < index; i++)
+            for(int i = 0; i < index; i++) {
                 currentNode = currentNode.next;
+            }
             return currentNode.value;
         }
     }
 
     @Override
     public int size() {
-        if(head == null)
+        if(head == null) {
             return 0;
-        else {
+        } else {
             int result = 1;
             Node currentNode = head;
             while (currentNode != tail) {

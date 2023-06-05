@@ -1,8 +1,7 @@
-package com.example.lb11_client;
+package com.example.client;
 
 import com.company.chatclient.ClientReceiver;
 import javafx.application.Platform;
-
 import java.util.Arrays;
 
 public class ClientGUIReceiver implements ClientReceiver {

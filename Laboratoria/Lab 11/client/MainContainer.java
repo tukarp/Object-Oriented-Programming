@@ -1,13 +1,13 @@
-package com.example.lb11_client;
-
 import com.company.chatclient.ServerThread;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
+import javafx.event.ActionEvent;
 import javafx.stage.FileChooser;
-import java.io.File;
+import javafx.scene.control.*;
+package com.example.client;
+import javafx.fxml.FXML;
 import java.util.List;
+import java.io.File;
+
 
 public class MainContainer {
     ServerThread serverThread;

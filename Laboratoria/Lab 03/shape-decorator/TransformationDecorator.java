@@ -2,7 +2,6 @@ package com.company.shapedecorator;
 
 import com.company.Shape;
 import com.company.Vec2;
-
 import java.util.Locale;
 
 public class TransformationDecorator extends ShapeDecorator {
@@ -58,13 +57,11 @@ public class TransformationDecorator extends ShapeDecorator {
             if(translate) {
                 result.translate = true;
                 result.translateVector = this.translateVector;
-            }
-            if(rotate) {
+            } if(rotate) {
                 result.rotate = true;
                 result.rotateAngle = this.rotateAngle;
                 result.rotateCenter = this.rotateCenter;
-            }
-            if(scale) {
+            } if(scale) {
                 result.scale = true;
                 result.scaleVector = this.scaleVector;
             }
@@ -84,6 +81,7 @@ public class TransformationDecorator extends ShapeDecorator {
             result += String.format(Locale.ENGLISH, "rotate(%f %f %f) ", rotateAngle, rotateCenter.x, rotateCenter.y);
         if(scale)
             result += String.format(Locale.ENGLISH, "scale(%f %f) ", scaleVector.x, scaleVector.y);
+        
         return  decoratedShape.toSvg(String.format("transform=\"%s\" %s", result, parameters));
     }
 }

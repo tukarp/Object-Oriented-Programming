@@ -6,6 +6,7 @@ public abstract class Shape {
     public Shape(Style style) {
         this.style = style;
     }
+    
     public abstract String toSvg();
     public abstract Point rightBottom();
 }

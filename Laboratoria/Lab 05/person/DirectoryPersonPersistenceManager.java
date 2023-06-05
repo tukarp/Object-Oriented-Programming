@@ -1,10 +1,10 @@
 package com.company.person;
 
-import java.io.*;
-import java.nio.file.Files;
-import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
+import java.time.LocalDate;
+import java.nio.file.Files;
 import java.util.*;
+import java.io.*;
 
 public class DirectoryPersonPersistenceManager implements PersonPersistenceManager{
     private enum FileExpectation{ExpectsDeath, ExpectsParent, ExpectsChild}
@@ -152,11 +152,9 @@ public class DirectoryPersonPersistenceManager implements PersonPersistenceManag
                 throw new AmbigiousPersonException(person.getPath(), temporaryMap.get(person.getName()).getPath());
             else
                 temporaryMap.put(person.getName(), person);
-        }
-        for (Map.Entry<String, TemporaryPerson> pair : temporaryMap.entrySet()) {
+        } for (Map.Entry<String, TemporaryPerson> pair : temporaryMap.entrySet()) {
             pair.getValue().convert(temporaryMap);
-        }
-        for (Map.Entry<String, TemporaryPerson> pair : temporaryMap.entrySet()) {
+        } for (Map.Entry<String, TemporaryPerson> pair : temporaryMap.entrySet()) {
             pair.getValue().convertChildren(temporaryMap);
         }
         Collection<TemporaryPerson> values = temporaryMap.values();
@@ -173,7 +171,6 @@ public class DirectoryPersonPersistenceManager implements PersonPersistenceManag
             }
         }
     }
-
 
     private TemporaryPerson fromFile(String path) {
         Scanner reader;
@@ -193,19 +190,21 @@ public class DirectoryPersonPersistenceManager implements PersonPersistenceManag
                 if(line.isEmpty()) continue;
                 switch (expectation) {
                     case ExpectsDeath:
-                        if(line.equals("Rodzice:"))
+                        if(line.equals("Rodzice:")) {
                             expectation = FileExpectation.ExpectsParent;
-                        else if (line.equals("Dzieci:"))
+                        } else if (line.equals("Dzieci:")) {
                             expectation = FileExpectation.ExpectsChild;
-                        else
+                        } else {
                             death = Person.parseDate(line);
+                        }
                         break;
                     case ExpectsParent:
                         System.out.println(name + " " + line);
-                        if (line.equals("Dzieci:"))
+                        if(line.equals("Dzieci:")) {
                             expectation = FileExpectation.ExpectsChild;
-                        else
+                        } else {
                             parentNames.add(line);
+                        }
                         break;
                     case ExpectsChild:
                         childrenNames.add(line);

@@ -1,6 +1,6 @@
-import java.io.*;
-import java.net.Socket;
 import java.nio.file.Path;
+import java.net.Socket;
+import java.io.*;
 
 public class ServerThread extends Thread {
     private Socket socket;
@@ -27,7 +27,6 @@ public class ServerThread extends Thread {
                     receiveFile(message.substring(2));
                 else
                     System.out.println(message);
-                //runCommand(message);
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -64,11 +63,14 @@ public class ServerThread extends Thread {
         try {
             long fileSize = file.length();
             writer.println("FI" + recipientName + " " + fileSize + " " + file.getName());
+
             FileInputStream fileIn = new FileInputStream(file);
             DataOutputStream fileOut = new DataOutputStream(socket.getOutputStream());
+
             byte[] buffer = new byte[64];
             int count;
-            while ((count = fileIn.read(buffer)) > 0) {
+            
+            while((count = fileIn.read(buffer)) > 0) {
                 fileOut.write(buffer,0,count);
             }
             fileIn.close();

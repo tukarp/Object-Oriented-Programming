@@ -1,8 +1,7 @@
 package com.company.shapedecorator;
 
-import com.company.Shape;
 import com.company.SvgScene;
-
+import com.company.Shape;
 import java.util.Arrays;
 import java.util.Locale;
 
@@ -41,8 +40,10 @@ public class GradientFillShapeDecorator extends ShapeDecorator {
     private int addRequiredDefToScene() {
         SvgScene scene = SvgScene.getInstance();
         String result = String.format(Locale.ENGLISH,"\t<linearGradient id=\"g%d\" >\n", index);
+
         for(var stop : stops)
             result += String.format(Locale.ENGLISH, "\t\t<stop offset=\"%f\" style=\"stop-color:%s\" />\n", stop.offset, stop.color);
+        
         result += "\t</linearGradient>";
         scene.addDef(result);
         return index++;
