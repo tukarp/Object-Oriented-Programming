@@ -63,10 +63,11 @@ public class DirectoryPersonPersistenceManager implements PersonPersistenceManag
 //        File[] files = new File(path).listFiles();
 //        for(int i = 0; i < files.length; i++) {
 //            TemporaryPerson person = fromFile(files[i].getPath());
-//            if(temporaryMap.containsKey(person.getName()))
+//            if(temporaryMap.containsKey(person.getName())) {
 //                throw new AmbigiousPersonException(person.getPath(), temporaryMap.get(person.getName()).getPath());
-//            else
+//            } else {
 //                temporaryMap.put(person.getName(), person);
+//            }
 //        }
 //        return temporaryMap.values().toArray(new Person[0]);
 //    }
@@ -80,10 +81,8 @@ public class DirectoryPersonPersistenceManager implements PersonPersistenceManag
 //            name = reader.readLine();
 //            birth = Person.parseDate(reader.readLine());
 //            death = Person.parseDate(reader.readLine());
-//
-//
 //        } catch (IOException | NullPointerException e) {
-//            //e.printStackTrace();
+//            e.printStackTrace();
 //        }
 //        return new TemporaryPerson(name, birth, death, path);
 //    }
@@ -106,13 +105,13 @@ public class DirectoryPersonPersistenceManager implements PersonPersistenceManag
 //                if(line.isEmpty()) continue;
 //                switch (expectation) {
 //                    case ExpectsDeath:
-//                        if(line.equals("Rodzice:"))
+//                        if(line.equals("Rodzice:")) {
 //                            expectation = FileExpectation.ExpectsParent;
-//                        else
+//                        } else {
 //                            death = Person.parseDate(line);
+//                        }
 //                        break;
 //                    case ExpectsParent:
-//                        //System.out.println(name + " " + line);
 //                        parentNames.add(line);
 //                        break;
 //                }
@@ -128,12 +127,13 @@ public class DirectoryPersonPersistenceManager implements PersonPersistenceManag
 //        File[] files = new File(path).listFiles();
 //        for(int i = 0; i < files.length; i++) {
 //            TemporaryPerson person = fromFile(files[i].getPath());
-//            if(temporaryMap.containsKey(person.getName()))
+//            if(temporaryMap.containsKey(person.getName())) {
 //                throw new AmbigiousPersonException(person.getPath(), temporaryMap.get(person.getName()).getPath());
-//            else
+//            } else {
 //                temporaryMap.put(person.getName(), person);
+//            }
 //        }
-//        for (Map.Entry<String, TemporaryPerson> pair : temporaryMap.entrySet()) {
+//        for(Map.Entry<String, TemporaryPerson> pair : temporaryMap.entrySet()) {
 //            pair.getValue().convert(temporaryMap);
 //        }
 //        Collection<TemporaryPerson> values = temporaryMap.values();
@@ -148,13 +148,14 @@ public class DirectoryPersonPersistenceManager implements PersonPersistenceManag
         File[] files = new File(path).listFiles();
         for(int i = 0; i < files.length; i++) {
             TemporaryPerson person = fromFile(files[i].getPath());
-            if(temporaryMap.containsKey(person.getName()))
+            if(temporaryMap.containsKey(person.getName())) {
                 throw new AmbigiousPersonException(person.getPath(), temporaryMap.get(person.getName()).getPath());
-            else
+            } else {
                 temporaryMap.put(person.getName(), person);
-        } for (Map.Entry<String, TemporaryPerson> pair : temporaryMap.entrySet()) {
+            }
+        } for(Map.Entry<String, TemporaryPerson> pair : temporaryMap.entrySet()) {
             pair.getValue().convert(temporaryMap);
-        } for (Map.Entry<String, TemporaryPerson> pair : temporaryMap.entrySet()) {
+        } for(Map.Entry<String, TemporaryPerson> pair : temporaryMap.entrySet()) {
             pair.getValue().convertChildren(temporaryMap);
         }
         Collection<TemporaryPerson> values = temporaryMap.values();
@@ -166,8 +167,9 @@ public class DirectoryPersonPersistenceManager implements PersonPersistenceManag
     private void checkParentingAge(Collection<TemporaryPerson> people) throws ParentingAgeException{
         for(TemporaryPerson person : people) {
             for(Person parent : person.parents) {
-                if(!ParentingAgeException.checkAge(person.getBirth().getYear() - parent.getBirth().getYear()))
+                if(!ParentingAgeException.checkAge(person.getBirth().getYear() - parent.getBirth().getYear())) {
                     throw new ParentingAgeException(person.getPath(), ((TemporaryPerson)parent).getPath());
+                }
             }
         }
     }

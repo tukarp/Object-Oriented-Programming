@@ -11,7 +11,7 @@ public class DatabaseConnection {
         return connection;
     }
 
-    public static void connect(){
+    public static void connect() {
         try {
             connection = DriverManager.getConnection("jdbc:sqlite:test.db");
             System.out.println("Connected");
@@ -20,7 +20,7 @@ public class DatabaseConnection {
         }
     }
 
-    public static void disconnect(){
+    public static void disconnect() {
         try {
             connection.close();
             System.out.println("Disconnected");

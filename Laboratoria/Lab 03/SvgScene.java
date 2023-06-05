@@ -29,13 +29,13 @@ public class SvgScene {
 
             for(Shape shape : shapes)
                 file.write("\t"+ shape.toSvg("") +"\n");
+            
             if(defs.length >= 0) {
                 file.write("<defs>\n");
                 for(var def : defs)
                     file.write(def + "\n");
                 file.write("</defs>\n");
             }
-
             file.write("</svg>\n</body>\n</html>\n");
             file.close();
         } catch (IOException e) {

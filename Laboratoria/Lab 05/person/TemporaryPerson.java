@@ -29,8 +29,9 @@ public class TemporaryPerson extends Person{
 //    public void convert(Map<String, TemporaryPerson> temporaryMap) {
 //        for(String parentName : parentNames) {
 //            Person parent = temporaryMap.get(parentName);
-//            if(parent == null)
+//            if(parent == null) {
 //                throw new UndefinedPersonReferenceException(path, getName());
+//            }
 //            this.parents.add(parent);
 //        }
 //    }
@@ -38,8 +39,9 @@ public class TemporaryPerson extends Person{
 //    public void convertChildren(Map<String, TemporaryPerson> temporaryMap) {
 //        for(String childName : childrenNames) {
 //            Person child = temporaryMap.get(childName);
-//            if(child == null)
+//            if(child == null) {
 //                throw new UndefinedPersonReferenceException(path, getName());
+//            }
 //            this.children.add(child);
 //        }
 //    }
@@ -48,7 +50,7 @@ public class TemporaryPerson extends Person{
     public void convert(Map<String, TemporaryPerson> temporaryMap) {
         for(String parentName : parentNames) {
             Person parent = temporaryMap.get(parentName);
-            if(parent == null)
+            if(parent == null) {}
                 throw new ParentNotReferencingChildException(path, getName());
             this.parents.add(parent);
         }

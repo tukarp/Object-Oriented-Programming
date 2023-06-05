@@ -98,7 +98,7 @@ public class ServerThread extends Thread {
 
             System.out.println("Receiving file from " + senderName + "...");
 
-            while (receivedSize < fileSize) {
+            while(receivedSize < fileSize) {
                 count = fileIn.read(buffer);
                 receivedSize += count;
                 System.out.print("\r" + (receivedSize * 100 / fileSize) + "%");

@@ -19,7 +19,7 @@ public class Ball extends GraphicsItem{
         graphicsContext.fillOval(x,y, width, height);
     }
 
-    void setPosition(Point2D point){
+    void setPosition(Point2D point) {
         this.x = point.getX() - width / 2;
         this.y = point.getY() - width / 2 - 5;
     }

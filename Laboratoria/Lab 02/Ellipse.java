@@ -19,6 +19,6 @@ public class Ellipse extends Shape{
 
     @Override
     public String toSvg() {
-        return String.format(Locale.ENGLISH,"<ellipse cx=\"%f\" cy=\"%f\" rx=\"%f\" ry=\"%f\" style=\"%s\"/>", center.x, center.y, rx, ry, style.toSvg());
+        return String.format(Locale.ENGLISH, "<ellipse cx=\"%f\" cy=\"%f\" rx=\"%f\" ry=\"%f\" style=\"%s\"/>", center.x, center.y, rx, ry, style.toSvg());
     }
 }

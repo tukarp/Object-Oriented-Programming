@@ -18,7 +18,7 @@ public class GameCanvas extends Canvas {
     private Boolean gameRunning = false;
     private List<Brick> bricks;
 
-    private AnimationTimer animationTimer= new AnimationTimer(){
+    private AnimationTimer animationTimer= new AnimationTimer() {
         private long lastUpdate;
         @Override
         public void handle(long now) {
@@ -76,7 +76,7 @@ public class GameCanvas extends Canvas {
         });
     }
 
-    public void draw(){
+    public void draw() {
         graphicsContext.setFill(Color.BLACK);
         graphicsContext.fillRect(0, 0, getWidth(), getHeight());
         paddle.draw(graphicsContext);
@@ -84,7 +84,7 @@ public class GameCanvas extends Canvas {
         bricks.forEach(brick -> brick.draw(graphicsContext));
     }
 
-    public void initialize(){
+    public void initialize() {
         paddle = new Paddle();
         ball = new Ball();
         loadLevel();
@@ -104,7 +104,7 @@ public class GameCanvas extends Canvas {
                 || (ball.x + ball.width >= getWidth() - 1 && ball.lastX + ball.width < getWidth() - 1);
     }
 
-    public void loadLevel(){
+    public void loadLevel() {
         bricks = new ArrayList<>();
         Color colors[] = new Color[]{Color.RED, Color.BEIGE, Color.BROWN, Color.GREENYELLOW, Color.BLUE};
         Brick.setGridRows(20,10);

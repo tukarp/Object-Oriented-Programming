@@ -12,7 +12,6 @@ public class Main {
         try {
             String line = reader.readLine();
             serverThread.login(line);
-
             while(true) {
                 String command = reader.readLine();
                 if(command.startsWith("/")) {

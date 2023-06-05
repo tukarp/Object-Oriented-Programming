@@ -12,7 +12,7 @@ import java.util.List;
 @Controller
 public class PersonController {
     @GetMapping("/person")
-    public String get(Model model){
+    public String get(Model model) {
         try {
             List<Person> result = Person.selectAll();
             model.addAttribute("people", result);
@@ -25,7 +25,7 @@ public class PersonController {
 
     @PostMapping("/add_person")
 
-    public String add(@ModelAttribute Person person){
+    public String add(@ModelAttribute Person person) {
         try {
             Person.insertPerson(person.getFirstName(), person.getLastName());
         } catch (SQLException throwables) {

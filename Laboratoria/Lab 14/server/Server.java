@@ -26,7 +26,7 @@ public class Server extends Thread {
 
     private List<ClientThread> clients = new ArrayList<>();
 
-    public void run(){
+    public void run() {
         try {
             this.serverSocket = new ServerSocket(port);
             Socket clientSocket;

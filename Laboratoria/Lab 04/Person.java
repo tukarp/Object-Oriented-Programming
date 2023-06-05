@@ -25,6 +25,7 @@ public class Person {
                 ", death=" + death +
                 '}';
     }
+
     public LocalDate getBirth() {
         return birth;
     }
@@ -114,7 +115,6 @@ public class Person {
     // Zadanie 3c
     public static void sortCsv(String path) {
         Person[] people = Person.fromCsv(path);
-        //Arrays.sort(people,Comparator.comparing(Person::getBirth));
         Arrays.sort(people, new Comparator<Person>(){
             public int compare(Person p1, Person p2) {
                 return p1.birth.compareTo(p2.birth);
@@ -147,9 +147,8 @@ public class Person {
     public static Person[] fromDirectory(String path) {
         File[] files = new File(path).listFiles();
         Person[] result = new Person[files.length];
-        for(int i = 0; i < files.length; i++) {
+        for(int i = 0; i < files.length; i++)
             result[i] = fromFile(files[i].getPath());
-        }
         return result;
     }
 

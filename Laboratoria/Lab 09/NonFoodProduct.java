@@ -16,7 +16,6 @@ public class NonFoodProduct extends Product {
     public static NonFoodProduct fromCsv(Path path) {
         String name;
         Double[] prices;
-
         try {
             Scanner scanner = new Scanner(path);
             name = scanner.nextLine();

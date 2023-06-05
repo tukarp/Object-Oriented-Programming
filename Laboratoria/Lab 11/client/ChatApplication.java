@@ -26,10 +26,6 @@ public class ChatApplication extends Application {
 
         Scene scene = new Scene(fxmlLoader.load(), 640, 480);
 
-//        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-//        System.out.println("Login: ");
-//        String login = reader.readLine();
-
         TextInputDialog dialog = new TextInputDialog();
         dialog.setTitle("Login");
         dialog.setHeaderText("Login");

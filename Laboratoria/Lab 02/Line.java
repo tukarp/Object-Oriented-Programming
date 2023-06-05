@@ -65,6 +65,6 @@ public class Line {
     }
 
     public String toSvg() {
-        return String.format(Locale.ENGLISH,"<line x1=\"%f\" y1=\"%f\" x2=\"%f\" y2=\"%f\" style=\"stroke:black\" />", p1.x, p1.y, p2.x, p2.y);
+        return String.format(Locale.ENGLISH, "<line x1=\"%f\" y1=\"%f\" x2=\"%f\" y2=\"%f\" style=\"stroke:black\" />", p1.x, p1.y, p2.x, p2.y);
     }
 }

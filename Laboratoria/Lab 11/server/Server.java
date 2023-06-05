@@ -20,7 +20,7 @@ public class Server {
         }
     }
 
-    public void listen(){
+    public void listen() {
         while(true){
             Socket clientSocket;
             try {
@@ -39,7 +39,7 @@ public class Server {
         broadcastLogout(client);
     }
 
-    public void broadcast(ClientThread sender, String message){
+    public void broadcast(ClientThread sender, String message) {
         for(var currentClient : clients) {
             currentClient.send("BR" + sender.getClientName() + " " + message);
         }
@@ -101,7 +101,7 @@ public class Server {
             int count;
 
             recipient.get().send("FI"+sender.getClientName()+" "+fileSize+" "+fileName);
-            while (receivedSize < fileSize) {
+            while(receivedSize < fileSize) {
                 count = fileIn.read(buffer);
                 receivedSize += count;
                 System.out.println(receivedSize+" "+(fileSize-receivedSize));
