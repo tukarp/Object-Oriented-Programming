@@ -201,7 +201,7 @@ public class DirectoryPersonPersistenceManager implements PersonPersistenceManag
                             death = Person.parseDate(line);
                         break;
                     case ExpectsParent:
-                        //System.out.println(name + " " + line);
+                        System.out.println(name + " " + line);
                         if (line.equals("Dzieci:"))
                             expectation = FileExpectation.ExpectsChild;
                         else
@@ -213,7 +213,7 @@ public class DirectoryPersonPersistenceManager implements PersonPersistenceManag
                 }
             }
         } catch (NullPointerException | FileNotFoundException e) {
-            //e.printStackTrace();
+            e.printStackTrace();
         }
         return new TemporaryPerson(name, birth, death, path, parentNames, childrenNames);
     }
