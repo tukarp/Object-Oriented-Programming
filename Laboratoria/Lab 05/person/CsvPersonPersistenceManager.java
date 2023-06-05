@@ -48,7 +48,6 @@ public class CsvPersonPersistenceManager implements PersonPersistenceManager{
 
     public void sortCsv(String path) {
         Person[] people = this.load(path);// Person.fromCsv(path);
-        //Arrays.sort(people,Comparator.comparing(Person::getBirth));
         Arrays.sort(people, new Comparator<Person>(){
             public int compare(Person p1, Person p2) {
                 return p1.getBirth().compareTo(p2.getBirth());
